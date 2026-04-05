@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&family=Space+Grotesque:wght@600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap');
 @import "tailwindcss";
 
@@ -10,9 +10,9 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --font-headline: 'Manrope', sans-serif;
-  --font-body: 'Inter', sans-serif;
-  --font-label: 'Inter', sans-serif;
+  --font-headline: 'Space Grotesque', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-label: 'Plus Jakarta Sans', sans-serif;
 
   --color-tertiary-dim: #54eed8;
   --color-on-tertiary-fixed: #004a41;
@@ -191,6 +191,20 @@
     font-size: 80%;
     overflow-x: hidden;
     scrollbar-gutter: stable;
+    overflow-x: hidden;
+  }
+
+  .glass-panel {
+    @apply backdrop-blur-2xl bg-white/[0.03] border border-white/10 shadow-2xl;
+  }
+
+  .section-glow-bottom {
+    @apply relative overflow-hidden;
+    background: linear-gradient(to bottom, #0e0e0e 0%, #080808 100%);
+  }
+
+  .accent-glow {
+    @apply absolute w-96 h-96 bg-[#2DD4BF]/5 blur-[120px] rounded-full pointer-events-none;
   }
 }
 
