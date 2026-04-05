@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react';
 import Image from 'next/image';
+import { SectionReveal } from './section-reveal';
 
 const testimonials = [
     {
@@ -75,16 +76,10 @@ export const FacultyTestimonials = () => {
     };
 
     return (
-        <section className="py-24 px-6 relative overflow-hidden bg-[#080808]">
-            <div className="max-w-7xl mx-auto">
+        <section className="py-36 px-6 relative overflow-hidden bg-[#080808] section-glow-bottom">
+            <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16">
                 {/* Section Header - Tiered Theme */}
-                <motion.div 
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1 }}
-                    viewport={{ once: true }}
-                    className="text-center mb-24"
-                >
+                <SectionReveal className="text-center mb-24">
                     <div className="flex flex-col gap-6 items-center">
                         <span className="text-[#2DD4BF] font-black tracking-[0.3em] uppercase text-xs">
                             Faculty Insights
@@ -97,7 +92,7 @@ export const FacultyTestimonials = () => {
                     <p className="text-neutral-400 text-lg md:text-xl leading-relaxed mt-8 font-medium max-w-2xl mx-auto">
                         Guidance and perspectives from the academic pillars supporting our technical journey.
                     </p>
-                </motion.div>
+                </SectionReveal>
 
                 {/* Carousel Container */}
                 <div className="relative min-h-[500px] flex items-center justify-center">
@@ -138,7 +133,7 @@ export const FacultyTestimonials = () => {
                                 }}
                                 className="absolute inset-0"
                             >
-                                <div className="h-full w-full bg-[#0A0A0A]/80 backdrop-blur-2xl rounded-[3.5rem] border border-white/5 p-8 md:p-16 flex flex-col items-center text-center relative overflow-hidden group">
+                                <div className="h-full w-full bg-[#0A0A0A]/50 backdrop-blur-3xl rounded-[3rem] border border-white/10 p-8 md:p-16 flex flex-col items-center text-center relative overflow-hidden group">
                                     {/* Decorative Quote Icon */}
                                     <Quote className="absolute -top-10 -left-10 w-48 h-48 text-[#2DD4BF]/5 -rotate-12 transition-transform duration-700 group-hover:rotate-0 group-hover:scale-110" />
                                     

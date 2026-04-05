@@ -3,6 +3,7 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import { Calendar, MapPin } from 'lucide-react';
+import { SectionReveal } from './section-reveal';
 
 const events = [
     {
@@ -45,16 +46,10 @@ export const EventsSection = () => {
     const lineHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
     return (
-        <section ref={containerRef} className="pt-32 pb-12 px-6 relative overflow-hidden">
-            <div className="max-w-7xl mx-auto">
+        <section ref={containerRef} className="py-36 px-6 relative overflow-hidden section-glow-bottom">
+            <div className="max-w-[1800px] mx-auto">
                 {/* Section Header */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1 }}
-                    viewport={{ once: true }}
-                    className="text-center mb-32"
-                >
+                <SectionReveal className="text-center mb-32">
                     <div className="flex flex-col gap-6 items-center w-full">
                         <div className="flex flex-col gap-6 items-center">
                             <span className="text-[#2DD4BF] font-black tracking-[0.3em] uppercase text-xs">
@@ -69,14 +64,12 @@ export const EventsSection = () => {
                             A detailed journey documenting our workshops, hackathons, and high-tech symposia.
                         </p>
                     </div>
-                </motion.div>
+                </SectionReveal>
 
                 <div className="relative">
                     <div className="flex flex-wrap gap-8 md:gap-10">
                         {events.map((event, index) => {
                             // Define widths for asymmetrical grid
-                            // Row 1: 58% / 38%
-                            // Row 2: 38% / 58%
                             const widths = [
                                 "md:flex-[1_1_58%]",
                                 "md:flex-[1_1_35%]",
@@ -85,22 +78,14 @@ export const EventsSection = () => {
                             ];
                             
                             return (
-                                <motion.div
+                                <SectionReveal
                                     key={index}
-                                    initial={{ opacity: 0, y: 20, filter: 'blur(10px)' }}
-                                    whileInView={{ opacity: 1, y: 0, filter: 'blur(0px)' }}
-                                    transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: index * 0.1 }}
-                                    viewport={{ once: true, margin: "-50px" }}
-                                    whileHover={{
-                                        y: -10,
-                                        scale: 1.01,
-                                        transition: { duration: 0.3 }
-                                    }}
-                                    className={`w-full ${widths[index % 4]} p-10 md:p-12 bg-[#111]/80 backdrop-blur-md rounded-[2.5rem] border border-white/5 relative group hover:border-[#2DD4BF]/40 transition-all duration-500 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.8)] overflow-hidden`}
+                                    delay={index * 0.1}
+                                    className={`w-full ${widths[index % 4]} p-10 md:p-12 bg-[#111]/80 backdrop-blur-md rounded-[3rem] border border-white/5 relative group hover:border-[#2DD4BF]/40 transition-all duration-500 shadow-[0_20px_50px_-20px_rgba(0,0,0,0.8)] overflow-hidden`}
                                 >
                                     {/* Animated background glow */}
                                     <div className="absolute -inset-1 bg-gradient-to-br from-[#2DD4BF]/20 via-transparent to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl" />
-                                    <div className="absolute inset-0 bg-gradient-to-br from-[#2DD4BF]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-[2.5rem]" />
+                                    <div className="absolute inset-0 bg-gradient-to-br from-[#2DD4BF]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-[3rem]" />
 
                                     <div className="relative z-10 text-left h-full flex flex-col">
                                         <div className="flex flex-col gap-4 mb-6">
@@ -122,7 +107,7 @@ export const EventsSection = () => {
                                             <span className="font-mono">{event.location}</span>
                                         </div>
                                     </div>
-                                </motion.div>
+                                </SectionReveal>
                             );
                         })}
                     </div>

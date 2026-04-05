@@ -8,12 +8,12 @@ import { FacultyTestimonials } from "@/modules/home/components/faculty-testimoni
 
 export default function Home() {
   return (
-    <main className="min-h-screen pb-32 selection:bg-tertiary/30 selection:text-tertiary bg-surface text-on-surface flex flex-col">
+    <main className="min-h-screen selection:bg-tertiary/30 selection:text-tertiary bg-surface text-on-surface flex flex-col">
       <Hero />
       <AboutSection />
       <BlogSection />
-      <GallerySection />
       <EventsSection />
+      <GallerySection />
       <SocialSection />
       <FacultyTestimonials />
     </main>

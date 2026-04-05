@@ -12,7 +12,7 @@ export function Navbar() {
     ];
 
     return (
-        <nav className="bg-white/30 backdrop-blur-xl shadow-2xl fixed top-4 left-1/2 -translate-x-1/2 w-[98%] max-w-7xl z-50 rounded-2xl border border-white/10">
+        <nav className="glass-panel fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-[1400px] z-50 rounded-2xl overflow-hidden">
             <div className="mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
                     {/* Logo */}
@@ -32,7 +32,7 @@ export function Navbar() {
                                 className="relative group text-gray-300 hover:text-white font-medium transition duration-200 py-1"
                             >
                                 {item.label}
-                                <span className="absolute left-1/2 -bottom-1 w-0 h-[2px] bg-purple-500 transition-all duration-300 group-hover:w-full group-hover:left-0 rounded-full"></span>
+                                <span className="absolute left-1/2 -bottom-1 w-0 h-[2px] bg-[#2DD4BF] transition-all duration-300 group-hover:w-full group-hover:left-0 rounded-full shadow-[0_0_10px_#2DD4BF]"></span>
                             </Link>
                         ))}
                     </div>

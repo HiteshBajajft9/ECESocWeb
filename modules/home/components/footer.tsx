@@ -6,12 +6,14 @@ import { FaGithub, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 export const Footer = () => {
     return (
-        <footer className="relative w-full bg-[#080808] pt-20 pb-10 border-t border-white/5">
+        <footer className="relative w-full bg-[#080808] pt-36 pb-20 border-t border-white/10 overflow-hidden">
+            {/* Mirror Navbar Glass Effect */}
+            <div className="absolute inset-0 bg-white/[0.01] backdrop-blur-[100px] pointer-events-none" />
             {/* Decorative top glow */}
             <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[#2DD4BF] to-transparent opacity-20" />
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1/2 h-20 bg-[#2DD4BF]/5 blur-3xl rounded-full pointer-events-none" />
 
-            <div className="max-w-[1400px] mx-auto px-12 md:px-24 lg:px-40 relative z-10">
+            <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16 relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-12 lg:gap-16 mb-16">
                     {/* Brand Section */}
                     <div className="col-span-1">

@@ -59,14 +59,15 @@ export const SocialSection = () => {
     ];
 
     return (
-        <section className="pt-12 pb-32 px-6 md:px-12 lg:px-16 max-w-[1800px] mx-auto">
-            <motion.div
-                variants={containerVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-100px" }}
-                className="relative bg-[#0A0A0A] rounded-[3.5rem] p-12 md:p-24 overflow-hidden border border-white/5"
-            >
+        <section className="py-36 bg-gradient-to-b from-[#080808] to-[#040404] overflow-hidden">
+            <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16">
+                <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-100px" }}
+                    className="relative bg-[#060606]/40 backdrop-blur-3xl rounded-[3rem] py-24 md:py-32 px-12 md:px-24 overflow-hidden shadow-[0_0_100px_-20px_rgba(0,0,0,0.5)]"
+                >
                 {/* Dynamic Drifting Glows */}
                 <motion.div
                     animate={{
@@ -118,7 +119,7 @@ export const SocialSection = () => {
                                     scale: 1.015,
                                     transition: { duration: 0.2, ease: "easeOut" }
                                 }}
-                                className="flex flex-col items-start gap-10 p-10 bg-white/[0.03] backdrop-blur-md border border-white/10 rounded-[3rem] group transition-all duration-200 hover:bg-white/[0.07] hover:border-[#2DD4BF]/50 hover:shadow-[0_20px_80px_-20px_rgba(45,212,191,0.3)]"
+                                className="flex flex-col items-start gap-10 p-10 bg-white/[0.02] backdrop-blur-md rounded-[3rem] group transition-all duration-500 hover:bg-white/[0.05] hover:border-[#2DD4BF]/30 hover:shadow-[0_20px_80px_-20px_rgba(45,212,191,0.3)]"
                             >
                                 <div className="flex justify-between items-start w-full">
                                     <div className={`w-20 h-20 rounded-3xl ${social.color} flex items-center justify-center shadow-[0_15px_30px_-10px_rgba(0,0,0,0.5)] group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 relative overflow-hidden`}>
@@ -139,7 +140,8 @@ export const SocialSection = () => {
                         ))}
                     </div>
                 </div>
-            </motion.div>
+                </motion.div>
+            </div>
         </section>
     );
 };

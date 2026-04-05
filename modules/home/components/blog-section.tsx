@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
+import { SectionReveal } from './section-reveal';
 
 const blogs = [
     {
@@ -34,6 +35,18 @@ const blogs = [
         category: "Communication",
         image: "/blogs/Satellite .jpeg",
         date: "November 2023"
+    },
+    {
+        title: "Quantum Engineering: The Qubit Frontier",
+        category: "Physics",
+        image: "/blogs/Summit .jpeg",
+        date: "October 2023"
+    },
+    {
+        title: "Thermal Management in Modern SoCs",
+        category: "Hardware",
+        image: "/blogs/Thermal .jpeg",
+        date: "September 2023"
     }
 ];
 
@@ -44,9 +57,9 @@ export const BlogSection = () => {
         const offset = index - mid;
 
         // Circular arc math
-        const rotationAngle = offset * 8; // degrees
-        const xOffset = offset * 110; // increased horizontal separation
-        const yOffset = Math.abs(offset) * 20; // Vertical arch
+        const rotationAngle = offset * 6; // slightly softened rotation for 7 items
+        const xOffset = offset * 130; // wider horizontal separation
+        const yOffset = Math.abs(offset) * 25; // increased vertical arch height
 
         return {
             rotate: rotationAngle,
@@ -57,16 +70,10 @@ export const BlogSection = () => {
     };
 
     return (
-        <section className="py-32 px-6 bg-[#000] overflow-hidden">
-            <div className="max-w-[1700px] mx-auto text-center">
+        <section className="py-36 px-6 bg-[#000] overflow-hidden section-glow-bottom">
+            <div className="max-w-[1800px] mx-auto text-center">
                 {/* Header */}
-                <motion.div
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1 }}
-                    viewport={{ once: true }}
-                    className="text-center mb-16"
-                >
+                <SectionReveal className="text-center mb-16">
                     <div className="flex flex-col gap-6 items-center">
                         <span className="text-[#2DD4BF] font-black tracking-[0.3em] uppercase text-xs">
                             Insights
@@ -79,10 +86,10 @@ export const BlogSection = () => {
                     <p className="text-neutral-400 text-lg md:text-xl max-w-2xl mt-8 font-medium leading-relaxed mx-auto">
                         Cutting-edge insights covering Electronics, Artificial Intelligence, and the future of Silicon.
                     </p>
-                </motion.div>
+                </SectionReveal>
 
                 {/* Fan Layout Container */}
-                <div className="relative h-[650px] flex justify-center items-center mb-24 perspective-[1500px]">
+                <div className="relative h-[750px] flex justify-center items-center mb-24 perspective-[1500px]">
                     {blogs.map((blog, index) => {
                         const style = getCardStyles(index);
                         return (
@@ -100,12 +107,16 @@ export const BlogSection = () => {
                                     rotate: style.rotate,
                                     x: style.x,
                                     y: style.y,
-                                    scale: 1
+                                    scale: 1,
+                                    transition: {
+                                        duration: 1.5,
+                                        ease: [0.16, 1, 0.3, 1],
+                                        delay: index * 0.1
+                                    }
                                 }}
                                 transition={{
-                                    duration: 1.5,
-                                    ease: [0.16, 1, 0.3, 1],
-                                    delay: index * 0.1
+                                    duration: 0.5,
+                                    ease: "circOut"
                                 }}
                                 viewport={{ once: true, margin: "-100px" }}
                                 whileHover={{
@@ -115,7 +126,7 @@ export const BlogSection = () => {
                                     zIndex: 50,
                                     transition: { duration: 0.4, ease: "easeOut" }
                                 }}
-                                className="absolute w-[300px] md:w-[350px] h-[450px] md:h-[500px] rounded-[2.5rem] overflow-hidden border border-white/10 cursor-pointer shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8)] group transition-all duration-300"
+                                className="absolute w-[300px] md:w-[350px] h-[450px] md:h-[500px] rounded-[3rem] overflow-hidden border border-white/10 cursor-pointer shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8)] group transition-all duration-300"
                                 style={{ zIndex: style.index }}
                             >
                                 <div className="absolute inset-0 z-0">
@@ -155,13 +166,7 @@ export const BlogSection = () => {
                 </div>
 
                 {/* View More Button */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8, delay: 0.8 }}
-                    viewport={{ once: true }}
-                    className="relative z-10"
-                >
+                <SectionReveal delay={0.8} className="relative z-10">
                     <motion.button
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
@@ -171,7 +176,7 @@ export const BlogSection = () => {
                         {/* Magnetic Glow Effect */}
                         <div className="absolute inset-0 bg-gradient-to-r from-[#2DD4BF]/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                     </motion.button>
-                </motion.div>
+                </SectionReveal>
             </div>
         </section>
     );

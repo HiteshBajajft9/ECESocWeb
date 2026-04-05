@@ -1,8 +1,9 @@
 'use client';
 
-import { motion, useAnimationControls } from 'framer-motion';
+import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
+import { SectionReveal } from './section-reveal';
 
 const galleryImages = [
     '/blogs/AESA.jpeg',
@@ -21,138 +22,119 @@ const galleryImages = [
     '/blogs/Summit .jpeg',
     '/blogs/Thermal .jpeg',
     '/home/batch.PNG',
-    '/blogs/AESA.jpeg',
-    '/blogs/CE20.jpeg',
-    '/blogs/Chipsets.jpeg',
-    '/blogs/DHRUV.jpeg',
 ];
 
 export const GallerySection = () => {
-    const controls1 = useAnimationControls();
-    const controls2 = useAnimationControls();
-    const [isPaused1, setIsPaused1] = useState(false);
-    const [isPaused2, setIsPaused2] = useState(false);
-    const [isInView, setIsInView] = useState(false);
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [isPaused, setIsPaused] = useState(false);
+    const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-    const row1 = galleryImages.slice(0, 10);
-    const row2 = galleryImages.slice(10, 20);
-
-    const SPEED = 25;
+    const nextSlide = () => {
+        setActiveIndex((prev) => (prev + 1) % galleryImages.length);
+    };
 
     useEffect(() => {
-        if (isInView && !isPaused1) {
-            controls1.start({
-                x: '-50%',
-                transition: { duration: SPEED, ease: 'linear', repeat: Infinity }
-            });
-        } else {
-            controls1.stop();
+        if (!isPaused) {
+            intervalRef.current = setInterval(nextSlide, 2000);
+        } else if (intervalRef.current) {
+            clearInterval(intervalRef.current);
         }
-    }, [isPaused1, isInView, controls1]);
-
-    useEffect(() => {
-        if (isInView && !isPaused2) {
-            controls2.start({
-                x: '0%',
-                transition: { duration: SPEED, ease: 'linear', repeat: Infinity }
-            });
-        } else {
-            controls2.stop();
-        }
-    }, [isPaused2, isInView, controls2]);
+        return () => {
+            if (intervalRef.current) clearInterval(intervalRef.current);
+        };
+    }, [isPaused]);
 
     return (
-        <section className="py-32 overflow-hidden bg-[#080808]">
-            <motion.div 
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1.5, ease: [0.16, 1, 0.3, 1] }}
-                viewport={{ once: true, margin: "-100px" }}
-                onViewportEnter={() => setIsInView(true)}
-                className="max-w-[1800px] mx-auto px-12 md:px-32 lg:px-72 mb-20 text-center md:text-left"
-            >
-                <div className="flex flex-col gap-6">
-                    <span className="text-[#2DD4BF] font-black tracking-[0.3em] uppercase text-xs">
-                        Events & Innovation
-                    </span>
-                    <h2 className="text-5xl md:text-6xl font-black text-white leading-tight">
-                        Technological <br />
-                        <span className="text-[#2DD4BF]">Gallery</span>
-                    </h2>
-                </div>
-            </motion.div>
-            
-            <div className="flex flex-col gap-12">
-                {/* Row 1 */}
-                <motion.div 
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 2 }}
-                    viewport={{ once: true }}
-                    className="relative flex whitespace-nowrap mask-gradient overflow-hidden px-12 md:px-32 lg:px-72"
-                    onMouseEnter={() => setIsPaused1(true)}
-                    onMouseLeave={() => setIsPaused1(false)}
-                >
-                    <motion.div
-                        animate={controls1}
-                        initial={{ x: '0%' }}
-                        className="flex gap-8 pr-8"
-                    >
-                        {[...row1, ...row1].map((src, index) => (
-                            <GalleryItem key={`r1-${index}`} src={src} index={index} />
-                        ))}
-                    </motion.div>
-                </motion.div>
+        <section className="py-36 bg-gradient-to-b from-[#0e0e0e] to-[#080808] overflow-hidden">
+            <div className="max-w-[1800px] mx-auto">
+                <SectionReveal className="mb-24 flex flex-col items-center text-center px-6">
+                    <div className="flex flex-col gap-6 items-center">
+                        <span className="text-[#2DD4BF] font-black tracking-[0.3em] uppercase text-xs">
+                            Visual Synthesis
+                        </span>
+                        <h2 className="text-5xl md:text-6xl font-black text-white leading-tight">
+                            The Ingenuity <br />
+                            <span className="text-[#2DD4BF]">Gallery</span>
+                        </h2>
+                    </div>
+                </SectionReveal>
 
-                {/* Row 2 */}
-                <motion.div 
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ duration: 2, delay: 0.2 }}
-                    viewport={{ once: true }}
-                    className="relative flex whitespace-nowrap mask-gradient overflow-hidden px-12 md:px-32 lg:px-72"
-                    onMouseEnter={() => setIsPaused2(true)}
-                    onMouseLeave={() => setIsPaused2(false)}
+                {/* 3D Coverflow Container */}
+                <div 
+                    className="relative h-[500px] flex items-center justify-center perspective-[1500px]"
+                    onMouseEnter={() => setIsPaused(true)}
+                    onMouseLeave={() => setIsPaused(false)}
                 >
-                    <motion.div
-                        animate={controls2}
-                        initial={{ x: '-50%' }}
-                        className="flex gap-8 pr-8"
-                    >
-                        {[...row2, ...row2].map((src, index) => (
-                            <GalleryItem key={`r2-${index}`} src={src} index={index} />
-                        ))}
-                    </motion.div>
-                </motion.div>
+                    <div className="relative w-full h-full flex items-center justify-center preserve-3d">
+                        {galleryImages.map((src, index) => {
+                            const offset = index - activeIndex;
+                            
+                            // Circular logic (showing items within a range)
+                            let normalizedOffset = offset;
+                            if (offset > galleryImages.length / 2) normalizedOffset -= galleryImages.length;
+                            if (offset < -galleryImages.length / 2) normalizedOffset += galleryImages.length;
+
+                            const absNormalizedOffset = Math.abs(normalizedOffset);
+                            
+                            // Hide items that are too far away
+                            const isVisible = absNormalizedOffset <= 3;
+
+                            return (
+                                <motion.div
+                                    key={index}
+                                    initial={false}
+                                    animate={{
+                                        x: normalizedOffset * 320,
+                                        scale: 1 - absNormalizedOffset * 0.15,
+                                        rotateY: normalizedOffset * -45,
+                                        zIndex: 10 - absNormalizedOffset,
+                                        opacity: isVisible ? 1 - absNormalizedOffset * 0.3 : 0,
+                                        pointerEvents: absNormalizedOffset === 0 ? 'auto' : 'none'
+                                    }}
+                                    transition={{
+                                        type: 'spring',
+                                        stiffness: 150,
+                                        damping: 25
+                                    }}
+                                    onClick={() => setActiveIndex(index)}
+                                    className="absolute w-[350px] md:w-[500px] aspect-[16/10] cursor-pointer group"
+                                    style={{ 
+                                        display: isVisible ? 'block' : 'none',
+                                        transformStyle: 'preserve-3d'
+                                    }}
+                                >
+                                    <div className="relative w-full h-full rounded-[3rem] overflow-hidden border border-white/10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8)] transition-all duration-500 group-hover:border-[#2DD4BF]/40 group-hover:shadow-[0_0_40px_-5px_rgba(45,212,191,0.3)]">
+                                        <Image
+                                            src={src}
+                                            alt={`Gallery image ${index + 1}`}
+                                            fill
+                                            className="object-cover transition-transform duration-1000 group-hover:scale-110"
+                                            sizes="500px"
+                                        />
+                                        
+                                        {/* Dynamic Overlay */}
+                                        <div className={`absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent transition-opacity duration-500 ${absNormalizedOffset === 0 ? 'opacity-100' : 'opacity-40 group-hover:opacity-100'}`} />
+                                        
+                                        {/* Status Text (focused on active card) */}
+                                        <div className={`absolute bottom-10 left-10 transition-all duration-500 ${absNormalizedOffset === 0 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0'}`}>
+                                            <div className="flex flex-col gap-1">
+                                                <span className="text-[#2DD4BF] font-black text-[10px] uppercase tracking-widest">Captured Moment #{index + 1}</span>
+                                                <div className="h-[2px] w-6 bg-[#2DD4BF]" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </motion.div>
+                            );
+                        })}
+                    </div>
+                </div>
             </div>
 
             <style jsx>{`
-                .mask-gradient {
-                    mask-image: linear-gradient(
-                        to right,
-                        transparent,
-                        black 2%,
-                        black 98%,
-                        transparent
-                    );
+                .preserve-3d {
+                    transform-style: preserve-3d;
                 }
             `}</style>
         </section>
     );
 };
-
-const GalleryItem = ({ src, index }: { src: string; index: number }) => (
-    <div
-        className="relative flex-shrink-0 w-[300px] md:w-[450px] aspect-[16/10] group overflow-hidden rounded-[2.5rem] border border-white/5 transition-all duration-700 hover:border-[#2DD4BF]/40 hover:shadow-[0_0_40px_-10px_rgba(45,212,191,0.2)]"
-    >
-        <Image
-            src={src}
-            alt={`Gallery image ${index + 1}`}
-            fill
-            className="object-cover transition-all duration-1000 group-hover:scale-110"
-            sizes="(max-width: 1024px) 50vw, 30vw"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-        <div className="absolute inset-0 ring-1 ring-inset ring-white/10 group-hover:ring-[#2DD4BF]/20 transition-all duration-700" />
-    </div>
-);
