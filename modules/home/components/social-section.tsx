@@ -59,7 +59,7 @@ export const SocialSection = () => {
     ];
 
     return (
-        <section className="py-36 bg-gradient-to-b from-[#080808] to-[#040404] overflow-hidden">
+        <section className="pt-16 pb-36 bg-gradient-to-b from-[#080808] to-[#040404] overflow-hidden">
             <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16">
                 <motion.div
                     variants={containerVariants}

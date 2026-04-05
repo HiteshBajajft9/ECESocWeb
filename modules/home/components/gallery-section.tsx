@@ -45,7 +45,7 @@ export const GallerySection = () => {
     }, [isPaused]);
 
     return (
-        <section className="py-36 bg-gradient-to-b from-[#0e0e0e] to-[#080808] overflow-hidden">
+        <section className="pt-36 pb-16 bg-gradient-to-b from-[#0e0e0e] to-[#080808] overflow-hidden">
             <div className="max-w-[1800px] mx-auto">
                 <SectionReveal className="mb-24 flex flex-col items-center text-center px-6">
                     <div className="flex flex-col gap-6 items-center">
@@ -62,8 +62,6 @@ export const GallerySection = () => {
                 {/* 3D Coverflow Container */}
                 <div 
                     className="relative h-[500px] flex items-center justify-center perspective-[1500px]"
-                    onMouseEnter={() => setIsPaused(true)}
-                    onMouseLeave={() => setIsPaused(false)}
                 >
                     <div className="relative w-full h-full flex items-center justify-center preserve-3d">
                         {galleryImages.map((src, index) => {
@@ -97,6 +95,8 @@ export const GallerySection = () => {
                                         damping: 25
                                     }}
                                     onClick={() => setActiveIndex(index)}
+                                    onMouseEnter={() => setIsPaused(true)}
+                                    onMouseLeave={() => setIsPaused(false)}
                                     className="absolute w-[350px] md:w-[500px] aspect-[16/10] cursor-pointer group"
                                     style={{ 
                                         display: isVisible ? 'block' : 'none',
