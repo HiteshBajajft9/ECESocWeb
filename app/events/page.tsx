@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import {
     Calendar, MapPin, ArrowRight, Zap, Code2, Trophy, Cpu,
-    Gamepad2, Star, Briefcase, Shield,
+    Gamepad2, Star, Briefcase,
 } from 'lucide-react';
 import { SectionReveal } from '@/modules/home/components/section-reveal';
 import { useState } from 'react';
@@ -15,12 +15,12 @@ import { useState } from 'react';
 const featuredEvents = [
     {
         id: 'techathon',
-        title: 'Techathon',
-        tagline: '24-Hour Hackathon',
-        date: 'Jan 22, 2025',
+        title: 'Tech-A-Thon',
+        tagline: '4-Week Hackathon',
+        date: 'July-August 2025',
         location: 'ECE Block, BIT Mesra',
         description:
-            'A high-velocity 24-hour hackathon where teams race against the clock to build embedded, IoT, and hardware solutions for real-world engineering problems.',
+            'ECE Society, BIT Mesra proudly presents its flagship event – Tech-A-Thon. This is a month-long, hybrid inter-college innovation sprint that brings together students from across India to build impactful solutions in Artificial Intelligence/Machine Learning, Core Electronics, Embedded Systems, Automation, and Web Development.',
         icon: Zap,
         color: '#a78bfa',
         badgeLabel: 'Flagship',
