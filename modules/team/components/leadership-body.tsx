@@ -16,7 +16,7 @@ export const LeadershipBody = () => {
           transition={{ duration: 0.8 }}
           className="text-5xl md:text-6xl font-black text-center mb-16 text-white"
         >
-          Leadership <span className="text-tertiary">Body</span>
+          Leadership <span className="text-[#2DD4BF]">Body</span>
         </motion.h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8">
           {leadershipBody.map((leader, index) => (

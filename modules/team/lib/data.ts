@@ -324,7 +324,7 @@ export const hallOfFame: HallOfFameMember[] = [
     photo: "/teams/default.jpg",
     social: {
       linkedin: "https://linkedin.com/in/rahulsharma",
-      gmail: "rahul.sharma@college.edu"
+      instagram: "https://instagram.com/rahul.sharma"
     }
   },
   {
@@ -345,8 +345,8 @@ export const hallOfFame: HallOfFameMember[] = [
     tenure: "2021",
     photo: "/teams/default.jpg",
     social: {
-      github: "https://github.com/amitkumar",
-      linkedin: "https://linkedin.com/in/amitkumar"
+      linkedin: "https://linkedin.com/in/amitkumar",
+      instagram: "https://instagram.com/amit.kumar"
     }
   },
   {
@@ -368,7 +368,7 @@ export const hallOfFame: HallOfFameMember[] = [
     photo: "/teams/default.jpg",
     social: {
       linkedin: "https://linkedin.com/in/vikramsingh",
-      gmail: "vikram.singh@college.edu"
+      instagram: "https://instagram.com/vikram.singh"
     }
   },
   {
@@ -379,7 +379,7 @@ export const hallOfFame: HallOfFameMember[] = [
     photo: "/teams/default.jpg",
     social: {
       linkedin: "https://linkedin.com/in/anjaliimehta",
-      github: "https://github.com/anjaliimehta"
+      instagram: "https://instagram.com/anjali.mehta"
     }
   }
 ];

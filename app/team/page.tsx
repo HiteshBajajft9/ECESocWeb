@@ -5,7 +5,7 @@ import { FacultyAdvisors } from "@/modules/team/components/faculty-advisors";
 import { LeadershipBody } from "@/modules/team/components/leadership-body";
 import { Executives } from "@/modules/team/components/executives";
 import { Contributors } from "@/modules/team/components/contributors";
-import Timeline from "@/modules/team/components/Timeline";
+import { HallOfFame } from "@/modules/team/components/hall-of-fame";
 import { SectionReveal } from '@/modules/home/components/section-reveal';
 
 export default function Team() {
@@ -25,7 +25,7 @@ export default function Team() {
             </span>
             <h1 className="text-6xl md:text-8xl font-black flex flex-wrap justify-center gap-x-4 leading-[0.85] tracking-tighter uppercase">
               <span className="text-white">ECE Society</span>
-              <span className="text-tertiary drop-shadow-[0_0_40px_rgba(45,212,191,0.3)]">Team</span>
+              <span className="text-[#2DD4BF] drop-shadow-[0_0_40px_rgba(45,212,191,0.3)]">Team</span>
             </h1>
           </motion.div>
           <motion.p
@@ -47,7 +47,7 @@ export default function Team() {
       <LeadershipBody />
       <Executives />
       <Contributors />
-      <Timeline />
+      <HallOfFame />
     </main>
   );
 }

@@ -16,7 +16,7 @@ export const Contributors = () => {
           transition={{ duration: 0.8 }}
           className="text-5xl md:text-6xl font-black text-center mb-16 text-white"
         >
-          Our <span className="text-tertiary">Contributors</span>
+          Our <span className="text-[#2DD4BF]">Contributors</span>
         </motion.h2>
         <div className="overflow-hidden group">
           <div className="flex gap-8 marquee-track">
