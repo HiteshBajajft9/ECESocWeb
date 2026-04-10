@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import {
     Calendar, MapPin, ArrowRight, Zap, Code2, Trophy, Cpu,
-    Gamepad2, Star, Briefcase,
+    Gamepad2, Star, Briefcase, Shield, Wrench, Wifi, Terminal,
 } from 'lucide-react';
 import { SectionReveal } from '@/modules/home/components/section-reveal';
 import { useState } from 'react';
@@ -101,6 +101,51 @@ const genericEvents = [
         gradientFrom: 'from-pink-500/20',
         gradientTo: 'to-purple-500/10',
         tags: ['Techfest', 'BIT Mesra', 'Annual'],
+    },
+];
+
+const workshopEvents = [
+    {
+        id: 'pcb-design',
+        title: 'PCB Design',
+        tagline: 'Hands-On PCB Workshop',
+        date: 'Feb 20, 2025',
+        location: 'Electronics Lab, BIT Mesra',
+        description:
+            'A hands-on workshop covering PCB design fundamentals using KiCad and EasyEDA — from schematic capture to layout, routing, and fabrication-ready exports.',
+        icon: Wrench,
+        color: '#facc15',
+        gradientFrom: 'from-yellow-500/20',
+        gradientTo: 'to-orange-500/10',
+        tags: ['PCB', 'KiCad', 'Hardware'],
+    },
+    {
+        id: 'iot-bootcamp',
+        title: 'IoT Bootcamp',
+        tagline: 'Build Connected Devices',
+        date: 'Mar 08, 2025',
+        location: 'ECE Lab B, BIT Mesra',
+        description:
+            'A two-day intensive bootcamp covering the full IoT stack — from ESP32 and sensor interfacing to MQTT, cloud dashboards, and real-time monitoring.',
+        icon: Wifi,
+        color: '#22d3ee',
+        gradientFrom: 'from-cyan-500/20',
+        gradientTo: 'to-sky-500/10',
+        tags: ['IoT', 'ESP32', 'Cloud'],
+    },
+    {
+        id: 'python-for-ece',
+        title: 'Python for ECE',
+        tagline: 'Signal Processing with Python',
+        date: 'Jan 30, 2025',
+        location: 'Computing Lab, BIT Mesra',
+        description:
+            'Learn to apply Python for ECE applications — signal processing with NumPy and SciPy, data visualisation with Matplotlib, and automation of lab measurements.',
+        icon: Terminal,
+        color: '#a3e635',
+        gradientFrom: 'from-lime-500/20',
+        gradientTo: 'to-green-500/10',
+        tags: ['Python', 'Signal Processing', 'NumPy'],
     },
 ];
 
@@ -458,6 +503,19 @@ export default function EventsPage() {
                 </SectionReveal>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
                     {genericEvents.map((event, i) => (
+                        <EventCard key={event.id} event={event} delay={i * 0.1} />
+                    ))}
+                </div>
+            </section>
+            {/* ── Workshops (3-col) ── */}
+            <section className="relative px-6 md:px-12 lg:px-20 pb-40 max-w-[1600px] mx-auto">
+                <SectionReveal className="mb-8">
+                    <span className="text-[10px] font-black uppercase tracking-[0.4em] text-neutral-600">
+                        ── Workshops
+                    </span>
+                </SectionReveal>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+                    {workshopEvents.map((event, i) => (
                         <EventCard key={event.id} event={event} delay={i * 0.1} />
                     ))}
                 </div>
