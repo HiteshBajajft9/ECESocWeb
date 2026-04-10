@@ -46,8 +46,8 @@ export default function Team() {
       <FacultyAdvisors />
       <LeadershipBody />
       <Executives />
-      <Contributors />
       <HallOfFame />
+      <Contributors />
     </main>
   );
 }
