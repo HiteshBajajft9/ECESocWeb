@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import {
     Calendar, MapPin, ArrowRight, Zap, Code2, Trophy, Cpu,
-    Gamepad2, Star, Briefcase, Shield, Swords,
+    Gamepad2, Star, Briefcase,
 } from 'lucide-react';
 import { SectionReveal } from '@/modules/home/components/section-reveal';
 import { useState } from 'react';
@@ -13,29 +13,6 @@ import { useState } from 'react';
 ══════════════════════════════════════════ */
 
 const featuredEvents = [
-    {
-        id: 'bitotsav',
-        title: 'Bitotsav',
-        tagline: 'The Grand Tech Fest',
-        date: 'Mar 14–16, 2025',
-        location: 'Main Campus, BIT Mesra',
-        description:
-            'The flagship annual techno-cultural festival of BIT Mesra. Three days of innovation, competitions, workshops, and performances uniting the brightest minds from across the nation.',
-        icon: Trophy,
-        color: '#2DD4BF',
-        badgeLabel: 'Flagship',
-        badgeIcon: Star,
-        glowRgb: '45,212,191',
-        purpleAccent: 'purple-600',
-        subEvents: [
-            {
-                name: 'Electropoly',
-                subtitle: 'Strategy · Board Game · Team Play',
-                icon: Gamepad2,
-                accentColor: '#2DD4BF',
-            },
-        ],
-    },
     {
         id: 'techathon',
         title: 'Techathon',
@@ -50,18 +27,28 @@ const featuredEvents = [
         badgeIcon: Star,
         glowRgb: '167,139,250',
         purpleAccent: 'blue-600',
+        subEvents: [],
+    },
+    {
+        id: 'bitotsav',
+        title: 'Bitotsav',
+        tagline: 'The Grand Tech Fest',
+        date: 'Mar 14–16, 2025',
+        location: 'Main Campus, BIT Mesra',
+        description:
+            'The flagship annual techno-cultural festival of BIT Mesra. Three days of innovation, competitions, workshops, and performances uniting the brightest minds from across the nation.',
+        icon: Trophy,
+        color: '#2DD4BF',
+        badgeLabel: '',
+        badgeIcon: null,
+        glowRgb: '45,212,191',
+        purpleAccent: 'purple-600',
         subEvents: [
             {
-                name: 'Pantheon',
-                subtitle: 'Mythology · Strategy · Knowledge',
-                icon: Shield,
-                accentColor: '#a78bfa',
-            },
-            {
-                name: 'Byte Battle',
-                subtitle: 'Speed Coding · Algorithms · Duel',
-                icon: Swords,
-                accentColor: '#a78bfa',
+                name: 'Electropoly',
+                subtitle: 'Strategy · Board Game · Team Play',
+                icon: Gamepad2,
+                accentColor: '#2DD4BF',
             },
         ],
     },
@@ -201,14 +188,16 @@ function FeaturedCard({ event }: { event: typeof featuredEvents[0] }) {
             <div className="absolute top-0 left-12 right-12 h-[1px] opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
                 style={{ background: `linear-gradient(90deg, transparent, ${event.color}80, transparent)` }} />
 
-            {/* Badge */}
-            <div className="absolute top-6 right-6 flex items-center gap-1.5 px-3 py-1.5 rounded-full backdrop-blur-sm border"
-                style={{ backgroundColor: `${event.color}12`, borderColor: `${event.color}30` }}>
-                <BadgeIcon className="w-3 h-3" style={{ color: event.color, fill: event.color }} />
-                <span className="text-[9px] font-black uppercase tracking-[0.2em]" style={{ color: event.color }}>
-                    {event.badgeLabel}
-                </span>
-            </div>
+            {/* Badge — only shown when set */}
+            {BadgeIcon && event.badgeLabel && (
+                <div className="absolute top-6 right-6 flex items-center gap-1.5 px-3 py-1.5 rounded-full backdrop-blur-sm border"
+                    style={{ backgroundColor: `${event.color}12`, borderColor: `${event.color}30` }}>
+                    <BadgeIcon className="w-3 h-3" style={{ color: event.color, fill: event.color }} />
+                    <span className="text-[9px] font-black uppercase tracking-[0.2em]" style={{ color: event.color }}>
+                        {event.badgeLabel}
+                    </span>
+                </div>
+            )}
 
             <div className="relative z-10 flex flex-col gap-6">
                 {/* Header */}
