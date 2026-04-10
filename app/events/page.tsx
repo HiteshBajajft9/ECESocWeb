@@ -147,6 +147,20 @@ const workshopEvents = [
         gradientTo: 'to-green-500/10',
         tags: ['VLSI', 'Verilog', 'Chip Design'],
     },
+    {
+        id: 'intro-to-digital-design',
+        title: 'Intro to Digital Design',
+        tagline: 'Logic & Digital Circuits',
+        date: 'Apr 02, 2025',
+        location: 'ECE Lab C, BIT Mesra',
+        description:
+            'A structured workshop on digital design fundamentals — Boolean algebra, combinational and sequential circuits, flip-flops, multiplexers, and an introduction to FPGA programming with Verilog.',
+        icon: Code2,
+        color: '#c084fc',
+        gradientFrom: 'from-purple-500/20',
+        gradientTo: 'to-pink-500/10',
+        tags: ['Digital', 'FPGA', 'Logic Design'],
+    },
 ];
 
 /* ══════════════════════════════════════════
@@ -514,7 +528,7 @@ export default function EventsPage() {
                         ── Workshops
                     </span>
                 </SectionReveal>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10">
                     {workshopEvents.map((event, i) => (
                         <EventCard key={event.id} event={event} delay={i * 0.1} />
                     ))}
