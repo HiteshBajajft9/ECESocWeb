@@ -29,6 +29,9 @@ const featuredEvents = [
         purpleAccent: 'blue-600',
         subEvents: [],
     },
+];
+
+const genericEvents = [
     {
         id: 'bitotsav',
         title: 'Bitotsav',
@@ -39,22 +42,10 @@ const featuredEvents = [
             'The flagship annual techno-cultural festival of BIT Mesra. Three days of innovation, competitions, workshops, and performances uniting the brightest minds from across the nation.',
         icon: Trophy,
         color: '#2DD4BF',
-        badgeLabel: '',
-        badgeIcon: null,
-        glowRgb: '45,212,191',
-        purpleAccent: 'purple-600',
-        subEvents: [
-            {
-                name: 'Electropoly',
-                subtitle: 'Strategy · Board Game · Team Play',
-                icon: Gamepad2,
-                accentColor: '#2DD4BF',
-            },
-        ],
+        gradientFrom: 'from-[#2DD4BF]/20',
+        gradientTo: 'to-purple-500/10',
+        tags: ['Tech Fest', 'Multi-Day', 'BIT Mesra'],
     },
-];
-
-const genericEvents = [
     {
         id: 'interninsights',
         title: 'Intern Insights',
