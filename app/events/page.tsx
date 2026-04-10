@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import {
     Calendar, MapPin, ArrowRight, Zap, Code2, Trophy, Cpu,
-    Gamepad2, Star, Briefcase, Shield, Wrench, Wifi, Terminal,
+    Gamepad2, Star, Briefcase, Shield, Terminal,
 } from 'lucide-react';
 import { SectionReveal } from '@/modules/home/components/section-reveal';
 import { useState } from 'react';
@@ -106,46 +106,46 @@ const genericEvents = [
 
 const workshopEvents = [
     {
-        id: 'pcb-design',
-        title: 'PCB Design',
-        tagline: 'Hands-On PCB Workshop',
-        date: 'Feb 20, 2025',
-        location: 'Electronics Lab, BIT Mesra',
+        id: 'gateway-to-electronics',
+        title: 'Gateway to Electronics',
+        tagline: 'Foundations Workshop',
+        date: 'Feb 10, 2025',
+        location: 'ECE Lab A, BIT Mesra',
         description:
-            'A hands-on workshop covering PCB design fundamentals using KiCad and EasyEDA — from schematic capture to layout, routing, and fabrication-ready exports.',
-        icon: Wrench,
+            'A beginner-friendly workshop introducing the core foundations of electronics — resistors, capacitors, diodes, transistors, and basic circuit analysis. Perfect for freshers stepping into the world of ECE.',
+        icon: Zap,
         color: '#facc15',
         gradientFrom: 'from-yellow-500/20',
         gradientTo: 'to-orange-500/10',
-        tags: ['PCB', 'KiCad', 'Hardware'],
+        tags: ['Basics', 'Electronics', 'Beginner'],
     },
     {
-        id: 'iot-bootcamp',
-        title: 'IoT Bootcamp',
-        tagline: 'Build Connected Devices',
-        date: 'Mar 08, 2025',
-        location: 'ECE Lab B, BIT Mesra',
+        id: 'intro-to-aiml',
+        title: 'Intro to AI/ML',
+        tagline: 'Artificial Intelligence Workshop',
+        date: 'Mar 05, 2025',
+        location: 'Computing Lab, BIT Mesra',
         description:
-            'A two-day intensive bootcamp covering the full IoT stack — from ESP32 and sensor interfacing to MQTT, cloud dashboards, and real-time monitoring.',
-        icon: Wifi,
+            'An introductory workshop on Artificial Intelligence and Machine Learning — covering supervised learning, neural networks, model training, and real-world ECE applications of AI.',
+        icon: Terminal,
         color: '#22d3ee',
         gradientFrom: 'from-cyan-500/20',
         gradientTo: 'to-sky-500/10',
-        tags: ['IoT', 'ESP32', 'Cloud'],
+        tags: ['AI', 'ML', 'Neural Networks'],
     },
     {
-        id: 'python-for-ece',
-        title: 'Python for ECE',
-        tagline: 'Signal Processing with Python',
-        date: 'Jan 30, 2025',
-        location: 'Computing Lab, BIT Mesra',
+        id: 'intro-to-vlsi',
+        title: 'Intro to VLSI',
+        tagline: 'Chip Design Workshop',
+        date: 'Mar 20, 2025',
+        location: 'Seminar Hall, ECE Dept.',
         description:
-            'Learn to apply Python for ECE applications — signal processing with NumPy and SciPy, data visualisation with Matplotlib, and automation of lab measurements.',
-        icon: Terminal,
+            'A hands-on introduction to VLSI design — from CMOS logic gates and digital circuits to RTL coding in Verilog, simulation, and an overview of the chip fabrication pipeline.',
+        icon: Cpu,
         color: '#a3e635',
         gradientFrom: 'from-lime-500/20',
         gradientTo: 'to-green-500/10',
-        tags: ['Python', 'Signal Processing', 'NumPy'],
+        tags: ['VLSI', 'Verilog', 'Chip Design'],
     },
 ];
 
