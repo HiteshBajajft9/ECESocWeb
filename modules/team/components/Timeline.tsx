@@ -98,9 +98,9 @@ const iconForRole = (role: string) => {
   }
 };
 
-const socialIcon = (social: { instagram?: string; github?: string; gmail?: string; linkedin?: string }) => {
+const socialIcon = (social: { instagram?: string; github?: string; gmail?: string; linkedin?: string }, isLeft: boolean = false) => {
   return (
-    <div className="mt-6 flex flex-wrap items-center gap-3">
+    <div className={`mt-6 flex flex-wrap items-center gap-3 ${isLeft ? 'sm:justify-end justify-start' : 'justify-start'}`}>
       {social.instagram && (
         <a
           href={social.instagram}
@@ -195,29 +195,31 @@ export default function Timeline() {
                     </motion.div>
                   </div>
 
-                  <div className={`mt-3 w-full max-w-sm lg:w-[38%] ${isLeft ? 'lg:text-right' : 'lg:text-left'}`}>
-                    <div className="rounded-[1.75rem] border border-white/10 bg-[#090909]/90 shadow-[0_18px_50px_-20px_rgba(0,0,0,0.8)] transition-all duration-500 hover:shadow-[0_24px_60px_-18px_rgba(45,212,191,0.28)] hover:border-[#2DD4BF]/30">
-                      <div className="relative overflow-hidden rounded-t-[1.75rem] aspect-[4/3]">
+                  <div className={`mt-3 w-full max-w-md lg:max-w-none lg:w-[46%] ${isLeft ? 'lg:text-right' : 'lg:text-left'}`}>
+                    <div className={`flex flex-col sm:flex-row ${isLeft ? 'sm:flex-row-reverse' : ''} rounded-[1.75rem] border border-white/10 bg-[#090909]/90 shadow-[0_18px_50px_-20px_rgba(0,0,0,0.8)] transition-all duration-500 hover:shadow-[0_24px_60px_-18px_rgba(45,212,191,0.28)] hover:border-[#2DD4BF]/30`}>
+                      <div className={`relative sm:w-40 sm:shrink-0 overflow-hidden rounded-t-[1.75rem] sm:rounded-none aspect-[4/3] sm:aspect-auto ${isLeft ? 'sm:rounded-r-[1.75rem] sm:border-l sm:border-white/5' : 'sm:rounded-l-[1.75rem] sm:border-r sm:border-white/5'}`}>
                         <Image
                           src={item.photo}
                           alt={`${item.role} ${item.year}`}
                           fill
                           className="object-cover transition-transform duration-1000 hover:scale-105"
                         />
-                        <div className="absolute inset-0 bg-linear-to-t from-black/80 via-transparent to-transparent" />
-                        <div className="absolute inset-x-0 bottom-0 px-3 pb-3">
+                        <div className={`absolute inset-0 bg-[linear-gradient(to_top,rgba(0,0,0,0.8),transparent)] sm:bg-[linear-gradient(to_right,rgba(0,0,0,0.8),transparent)] ${isLeft ? 'sm:bg-[linear-gradient(to_left,rgba(0,0,0,0.8),transparent)]' : ''}`} />
+                        <div className="absolute inset-x-0 bottom-0 px-3 pb-3 sm:px-4 sm:pb-4">
                           <span className="inline-flex rounded-full bg-white/10 px-2 py-0.5 text-[9px] uppercase tracking-[0.35em] text-[#2DD4BF] shadow-sm">
                             {item.year}
                           </span>
                         </div>
                       </div>
-                      <div className="p-4">
+                      <div className={`flex flex-col justify-center flex-1 p-5 lg:p-6 ${isLeft ? 'items-start sm:items-end' : 'items-start'}`}>
                         <div className="mb-2">
-                          <h3 className="text-base font-black tracking-tight text-white">{item.role}</h3>
-                          <p className="mt-1 text-[9px] font-semibold uppercase tracking-[0.3em] text-[#2DD4BF]/90">{item.title}</p>
+                          <h3 className="text-lg sm:text-xl font-black tracking-tight text-white">{item.role}</h3>
+                          <p className="mt-1 text-[10px] sm:text-xs font-semibold uppercase tracking-[0.3em] text-[#2DD4BF]/90">{item.title}</p>
                         </div>
                         <p className="text-sm leading-6 text-neutral-300">{item.description}</p>
-                        {socialIcon(item.social)}
+                        <div className="w-full">
+                          {socialIcon(item.social, isLeft)}
+                        </div>
                       </div>
                     </div>
                   </div>
