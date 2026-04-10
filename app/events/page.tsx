@@ -3,7 +3,7 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import {
     Calendar, MapPin, ArrowRight, Zap, Code2, Trophy, Cpu,
-    Gamepad2, Star, Briefcase,
+    Gamepad2, Star, Briefcase, Shield,
 } from 'lucide-react';
 import { SectionReveal } from '@/modules/home/components/section-reveal';
 import { useState } from 'react';
@@ -87,6 +87,20 @@ const genericEvents = [
         gradientFrom: 'from-orange-500/20',
         gradientTo: 'to-red-500/10',
         tags: ['Electronics', 'Quiz', 'ECE Domain'],
+    },
+    {
+        id: 'pantheon',
+        title: 'Pantheon',
+        tagline: 'The Ultimate Techfest',
+        date: 'Apr 05, 2025',
+        location: 'Main Auditorium, BIT Mesra',
+        description:
+            'Pantheon is the grand techfest of BIT Mesra — a convergence of the brightest engineering minds across India. Packed with technical competitions, hackathons, workshops, and culturals, it celebrates innovation, creativity, and the spirit of engineering at its finest.',
+        icon: Shield,
+        color: '#f472b6',
+        gradientFrom: 'from-pink-500/20',
+        gradientTo: 'to-purple-500/10',
+        tags: ['Techfest', 'BIT Mesra', 'Annual'],
     },
 ];
 
