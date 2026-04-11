@@ -11,7 +11,6 @@ interface TeamMemberCardProps {
     photo: string;
     social: {
       instagram?: string;
-      github?: string;
       gmail?: string;
       linkedin?: string;
     };
@@ -37,7 +36,7 @@ export const TeamMemberCard = ({ member }: TeamMemberCardProps) => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-transparent to-transparent" />
 
             <div className="absolute inset-x-0 bottom-0 px-4 pb-4 pt-20">
-              <div className="transition-transform duration-300 group-hover:-translate-y-2">
+              <div className="translate-y-4 transition-transform duration-300 group-hover:-translate-y-2">
                 <h3 className="text-lg md:text-xl font-black text-white tracking-tight">{member.name}</h3>
                 <p className="text-xs md:text-sm text-neutral-300 mt-1">{member.role}</p>
               </div>
@@ -60,16 +59,6 @@ export const TeamMemberCard = ({ member }: TeamMemberCardProps) => {
                     className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white transition-all duration-300 hover:border-[#2DD4BF]/40 hover:bg-[#2DD4BF]/15 hover:text-[#2DD4BF]"
                   >
                     <FiLinkedin size={18} />
-                  </a>
-                )}
-                {member.social.github && (
-                  <a
-                    href={member.social.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white transition-all duration-300 hover:border-[#2DD4BF]/40 hover:bg-[#2DD4BF]/15 hover:text-[#2DD4BF]"
-                  >
-                    <FiGithub size={18} />
                   </a>
                 )}
                 {member.social.gmail && (

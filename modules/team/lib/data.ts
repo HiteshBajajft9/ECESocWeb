@@ -4,7 +4,6 @@ export interface TeamMember {
   photo: string;
   social: {
     instagram?: string;
-    github?: string;
     gmail?: string;
     linkedin?: string;
   };
@@ -14,291 +13,270 @@ export const facultyAdvisors: TeamMember[] = [
   {
     name: "Arnav Srivastava",
     role: "Faculty Advisor",
-    photo: "/teams/Arnav.png",
+    photo: "/teams/Arnav Srivastava.JPG",
     social: {
-      gmail: "john.doe@college.edu",
-      linkedin: "https://linkedin.com/in/johndoe",
-    },
-  },
-  {
-    name: "Dr. Priya Verma",
-    role: "Faculty Advisor",
-    photo: "/team/faculty2.jpg",
-    social: {
-      gmail: "priya.verma@college.edu",
-      linkedin: "https://linkedin.com/in/priyaverma",
-    },
-  },
-  {
-    name: "Dr. Arun Khanna",
-    role: "Faculty Advisor",
-    photo: "/team/faculty3.jpg",
-    social: {
-      gmail: "arun.khanna@college.edu",
-      linkedin: "https://linkedin.com/in/arunkhanna",
+      gmail: "advisor1@college.edu",
+      linkedin: "https://linkedin.com/",
     },
   },
 ];
 
 export const leadershipBody: TeamMember[] = [
   {
-    name: "Ananya Rao",
-    role: "Leadership Coordinator",
-    photo: "/teams/Arnav.png",
+    name: "Arijit Dubey",
+    role: "Core Technical Head",
+    photo: "/teams/Arijit_Dubey.jpg",
     social: {
-      instagram: "https://instagram.com/ananya.rao",
-      github: "https://github.com/ananyar",
-      linkedin: "https://linkedin.com/in/ananyar",
+      gmail: "btech10142.23@gmail.com",
+      instagram: "https://www.instagram.com/omniman1107/",
+      linkedin: "https://www.linkedin.com/in/arijit-dubey-85471028a/"
     },
   },
   {
-    name: "Rohan Iyer",
-    role: "Operations Head",
-    photo: "/team/leadership2.jpg",
+    name: "Rahul Kumar",
+    role: "Event Head",
+    photo: "/teams/RAHUL KUMAR (1).jpg",
     social: {
-      instagram: "https://instagram.com/rohan.iyer",
-      github: "https://github.com/rohaniyer",
-      linkedin: "https://linkedin.com/in/rohaniyer",
+      gmail: "btech10203.23@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/rahullkumarr.__/",
+      linkedin: "https://www.linkedin.com/in/rahul-kumar-2004-06-06-rk"
     },
   },
   {
-    name: "Maya Singh",
-    role: "Outreach Lead",
-    photo: "/team/leadership3.jpg",
+    name: "Kumar Ishaan",
+    role: "President",
+    photo: "/teams/KUMAR ISHAAN.png",
     social: {
-      instagram: "https://instagram.com/maya.singh",
-      github: "https://github.com/mayasingh",
-      linkedin: "https://linkedin.com/in/mayasingh",
+      gmail: "btech10101.23@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/kr._ishaan",
+      linkedin: "https://www.linkedin.com/in/kumar-ishaan-44b3a429b"
     },
   },
   {
-    name: "Kartik Mehta",
-    role: "Program Head",
-    photo: "/team/leadership4.jpg",
+    name: "Megha Goswami",
+    role: "Event Head",
+    photo: "/teams/Megha_Goswami.jpg",
     social: {
-      instagram: "https://instagram.com/kartik.mehta",
-      github: "https://github.com/kartikmehta",
-      linkedin: "https://linkedin.com/in/kartikmehta",
+      gmail: "btech10569.23@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/__megha16__",
+      linkedin: "https://www.linkedin.com/in/megha-goswami2416/"
     },
   },
   {
-    name: "Sanya Patel",
-    role: "Design Head",
-    photo: "/team/leadership5.jpg",
+    name: "Romil Raj",
+    role: "Web Technical Head",
+    photo: "/teams/Romil Raj.jpg",
     social: {
-      instagram: "https://instagram.com/sanya.patel",
-      github: "https://github.com/sanyapatel",
-      linkedin: "https://linkedin.com/in/sanyapatel",
+      gmail: "btech10662.23@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/raj_romil_/",
+      linkedin: "https://www.linkedin.com/in/romil-raj-80983728a/"
     },
   },
   {
-    name: "Nikhil Sharma",
-    role: "PR Head",
-    photo: "/team/leadership6.jpg",
+    name: "Pratham Periwal",
+    role: "Vice President",
+    photo: "/teams/Pratham Periwal.jpeg",
     social: {
-      instagram: "https://instagram.com/nikhil.sharma",
-      github: "https://github.com/nikhilsharma",
-      linkedin: "https://linkedin.com/in/nikhilsharma",
+      gmail: "btech10141.23@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/me_prathamperiwal/",
+      linkedin: "https://www.linkedin.com/in/prathamperiwal/"
     },
   },
   {
-    name: "Riya Kapoor",
-    role: "Strategy Head",
-    photo: "/team/leadership7.jpg",
+    name: "Vibhor Jain",
+    role: "Vice President",
+    photo: "/teams/Vibhor_Jain.jpg",
     social: {
-      instagram: "https://instagram.com/riya.kapoor",
-      github: "https://github.com/riyakapoor",
-      linkedin: "https://linkedin.com/in/riyakapoor",
+      gmail: "btech10732.23@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/jnvibhor_1108",
+      linkedin: "https://www.linkedin.com/in/vibhorjain1108"
     },
   },
   {
-    name: "Aditya Bose",
-    role: "Finance Head",
-    photo: "/team/leadership8.jpg",
+    name: "Harshita Prasad",
+    role: "Director",
+    photo: "/teams/Harshita_Prasad.jpg",
     social: {
-      instagram: "https://instagram.com/aditya.bose",
-      github: "https://github.com/adityabose",
-      linkedin: "https://linkedin.com/in/adityabose",
+      gmail: "btech10244.23@bitmesra.ac.in",
+      linkedin: "https://www.linkedin.com/in/harshita-prasad-92571733b"
     },
   },
+  {
+    name: "Parth Sarvansh Dixit",
+    role: "Content Head",
+    photo: "/teams/Parth_Sarvansh_Dixit.jpg",
+    social: {
+      gmail: "btech10720.23@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/parthsarvansh/",
+      linkedin: "https://www.linkedin.com/in/parth-sarvansh-dixit-2487a5274/"
+    },
+  },
+  {
+    name: "Abhinav Kumar Choudhary",
+    role: "Senior Executive Member",
+    photo: "/teams/Abhinav Kumar Choudhary.jpg",
+    social: {
+      gmail: "btech10139.23@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/poetry_aficionado",
+      linkedin: "https://www.linkedin.com/in/abhi1264"
+    },
+  },
+  {
+    name: "Sahil Kumar",
+    role: "Vice President",
+    photo: "/teams/Sahil Kumar.jpg",
+    social: {
+      gmail: "btech10436.22@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/notreallysahil",
+      linkedin: "https://www.linkedin.com/in/sahil-kumar-641220267"
+    },
+  }
 ];
 
 export const executives: TeamMember[] = [
   {
-    name: "Jane Smith",
-    role: "President",
-    photo: "/team/exec1.jpg",
+    name: "Hitesh Bajaj",
+    role: "Leadership Coordinator",
+    photo: "/teams/Hitesh Bajaj.webp",
+    social: { instagram: "#", linkedin: "#" },
+  },
+  {
+    name: "Sadique Ahmad Khan",
+    role: "Video Coordinator",
+    photo: "/teams/Sadique Khan.jpg",
     social: {
-      instagram: "https://instagram.com/janesmith",
-      github: "https://github.com/janesmith",
-      gmail: "jane.smith@college.edu",
-      linkedin: "https://linkedin.com/in/janesmith",
+      gmail: "btech10720.24@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/sadique.khan.01/",
+      linkedin: "https://www.linkedin.com/in/sadique-ahmad-khan-1a185137b/"
     },
   },
   {
-    name: "Arjun Bose",
-    role: "Vice President",
-    photo: "/team/exec2.jpg",
+    name: "Baishnavi Prasad",
+    role: "Core Coordinator",
+    photo: "/teams/Baishnavi Prasad.jpg",
     social: {
-      instagram: "https://instagram.com/arjun.bose",
-      github: "https://github.com/arjunbose",
-      linkedin: "https://linkedin.com/in/arjunbose",
+      gmail: "btech10295.24@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/baishnaviprasad",
+      linkedin: "https://www.linkedin.com/in/baishnavi-prasad-bab90233b"
     },
   },
   {
-    name: "Sneha Gupta",
-    role: "Secretary",
-    photo: "/team/exec3.jpg",
+    name: "Priyanshu Srivastava",
+    role: "Tech Coordinator",
+    photo: "/teams/Priyanshu Srivastava.jpeg",
     social: {
-      instagram: "https://instagram.com/sneha.gupta",
-      github: "https://github.com/snehagupta",
-      linkedin: "https://linkedin.com/in/snehagupta",
+      gmail: "btech10717.24@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/priyanshusri023/",
+      linkedin: "https://www.linkedin.com/in/priyanshu-srivastava-171038320/"
     },
   },
   {
-    name: "Vikram Patel",
+    name: "Sidhant Anweshi",
+    role: "Executive Member",
+    photo: "/teams/Sidhant Anweshi.jpg",
+    social: {
+      gmail: "btech10434.24@bitmesra.ac.in",
+      linkedin: "https://www.linkedin.com/in/sidhant-anweshi-077422390"
+    },
+  },
+  {
+    name: "Aanyaa Sinha",
+    role: "Joint Secretary",
+    photo: "/teams/Aanyaa Sinha.jpg",
+    social: {
+      gmail: "btech10789.24@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/aanyaasinha_1676",
+      linkedin: "https://www.linkedin.com/in/aanyaa-sinha-426524326"
+    },
+  },
+  {
+    name: "Prince Janardan",
+    role: "Alumni and Relation Coordinator",
+    photo: "/teams/Prince Janardan.JPG",
+    social: {
+      gmail: "btech10680.24@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/janardanprince",
+      linkedin: "https://www.linkedin.com/in/prince-janardan-66a148325/"
+    },
+  },
+  {
+    name: "Shreya Sneha",
     role: "Treasurer",
-    photo: "/team/exec4.jpg",
+    photo: "/teams/shreya.jpeg",
     social: {
-      instagram: "https://instagram.com/vikram.patel",
-      github: "https://github.com/vikrampatel",
-      linkedin: "https://linkedin.com/in/vikrampatel",
+      gmail: "btech10216.24@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/shhh._.31",
+      linkedin: "https://www.linkedin.com/in/shreya-sneha-54507835b"
     },
   },
   {
-    name: "Elaine Thomas",
-    role: "Events Head",
-    photo: "/team/exec5.jpg",
+    name: "Divyanshu Kumar",
+    role: "Treasurer",
+    photo: "/teams/Divyanshu Kr.jpg",
     social: {
-      instagram: "https://instagram.com/elaine.thomas",
-      github: "https://github.com/elainethomas",
-      linkedin: "https://linkedin.com/in/elainethomas",
+      gmail: "btech10982.24@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/dvyanshooo/",
+      linkedin: "https://www.linkedin.com/in/divyanshu-kumar-8210dk"
     },
   },
   {
-    name: "Kabir Shah",
-    role: "Technical Lead",
-    photo: "/team/exec6.jpg",
+    name: "Siddharth Kumar Nayak",
+    role: "ML Head",
+    photo: "/teams/Siddharth Kumar Nayak .jpg",
     social: {
-      instagram: "https://instagram.com/kabir.shah",
-      github: "https://github.com/kabirshah",
-      linkedin: "https://linkedin.com/in/kabirshah",
+      gmail: "btech10756.24@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/nayaksiddharth_719",
+      linkedin: "https://www.linkedin.com/in/siddharth-kumar-nayak-a26449338"
     },
   },
   {
-    name: "Priya Nair",
-    role: "Design Lead",
-    photo: "/team/exec7.jpg",
+    name: "Gungun Barnwal",
+    role: "Design Head",
+    photo: "/teams/Gungun Barnwal.jpg",
     social: {
-      instagram: "https://instagram.com/priya.nair",
-      github: "https://github.com/priyanair",
-      linkedin: "https://linkedin.com/in/priyanair",
+      gmail: "btech10668.24@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/gungun_2816",
+      linkedin: "https://www.linkedin.com/in/gungun-barnwal-891853312"
     },
   },
   {
-    name: "Rahul Verma",
-    role: "Content Head",
-    photo: "/team/exec8.jpg",
+    name: "Aozz",
+    role: "Alumni Relations Coordinator",
+    photo: "/teams/Aozz Brahmshiv Jha .jpg",
     social: {
-      instagram: "https://instagram.com/rahul.verma",
-      github: "https://github.com/rahulverma",
-      linkedin: "https://linkedin.com/in/rahulverma",
-    },
-  },
-];
-
-export const contributors: TeamMember[] = [
-  {
-    name: "Alice Johnson",
-    role: "Contributor",
-    photo: "/team/contrib1.jpg",
-    social: {
-      instagram: "https://instagram.com/alicejohnson",
-      github: "https://github.com/alicejohnson",
-      gmail: "alice.johnson@college.edu",
+      gmail: "btech10794.24@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/notaozz/",
+      linkedin: "https://www.linkedin.com/in/aozz/"
     },
   },
   {
-    name: "Karan Mehta",
-    role: "Contributor",
-    photo: "/team/contrib2.jpg",
+    name: "Anmol Kumar",
+    role: "General Secretary",
+    photo: "/teams/Anmol Kumar.jpg",
     social: {
-      instagram: "https://instagram.com/karan.mehta",
-      github: "https://github.com/karanmehta",
+      gmail: "btech10376.24@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/anmolkr.ojha/",
+      linkedin: "https://www.linkedin.com/in/anmol-kumar-b36270323/"
     },
   },
   {
-    name: "Meera Das",
-    role: "Contributor",
-    photo: "/team/contrib3.jpg",
+    name: "Sameer Kumar",
+    role: "Core Coordinator",
+    photo: "/teams/Sameer Kumar.jpg",
     social: {
-      instagram: "https://instagram.com/meera.das",
-      github: "https://github.com/meerdas",
+      gmail: "btech10805.24@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/sameerrkrr",
+      linkedin: "https://www.linkedin.com/in/sameer-kumar-410459325"
     },
   },
   {
-    name: "Amit Singh",
-    role: "Contributor",
-    photo: "/team/contrib4.jpg",
+    name: "Akriti Agarwal",
+    role: "Content Coordinator",
+    photo: "/teams/Akriti Agarwal .jpg",
     social: {
-      instagram: "https://instagram.com/amit.singh",
-      github: "https://github.com/amitsingh",
+      gmail: "btech10899.24@bitmesra.ac.in"
     },
-  },
-  {
-    name: "Nina Roy",
-    role: "Contributor",
-    photo: "/team/contrib5.jpg",
-    social: {
-      instagram: "https://instagram.com/nina.roy",
-      github: "https://github.com/ninaroy",
-    },
-  },
-  {
-    name: "Aditya Kumar",
-    role: "Contributor",
-    photo: "/team/contrib6.jpg",
-    social: {
-      instagram: "https://instagram.com/aditya.kumar",
-      github: "https://github.com/adityakumar",
-    },
-  },
-  {
-    name: "Sakshi Jain",
-    role: "Contributor",
-    photo: "/team/contrib7.jpg",
-    social: {
-      instagram: "https://instagram.com/sakshi.jain",
-      github: "https://github.com/sakshijain",
-    },
-  },
-  {
-    name: "Tarun Bhandari",
-    role: "Contributor",
-    photo: "/team/contrib8.jpg",
-    social: {
-      instagram: "https://instagram.com/tarun.bhandari",
-      github: "https://github.com/tarunbhandari",
-    },
-  },
-  {
-    name: "Rhea Kapoor",
-    role: "Contributor",
-    photo: "/team/contrib9.jpg",
-    social: {
-      instagram: "https://instagram.com/rhea.kapoor",
-      github: "https://github.com/rheakapoor",
-    },
-  },
-  {
-    name: "Devansh Gupta",
-    role: "Contributor",
-    photo: "/team/contrib10.jpg",
-    social: {
-      instagram: "https://instagram.com/devansh.gupta",
-      github: "https://github.com/devanshgupta",
-    },
-  },
+  }
 ];
 
 export interface HallOfFameMember {
@@ -314,6 +292,8 @@ export interface HallOfFameMember {
     linkedin?: string;
   };
 }
+
+export const contributors: TeamMember[] = [];
 
 export const hallOfFame: HallOfFameMember[] = [
   {
@@ -337,49 +317,6 @@ export const hallOfFame: HallOfFameMember[] = [
       linkedin: "https://linkedin.com/in/priyapatel",
       instagram: "https://instagram.com/priya.patel"
     }
-  },
-  {
-    year: "2021",
-    name: "Amit Kumar",
-    pastPosition: "Former President",
-    tenure: "2021",
-    photo: "/teams/default.jpg",
-    social: {
-      linkedin: "https://linkedin.com/in/amitkumar",
-      instagram: "https://instagram.com/amit.kumar"
-    }
-  },
-  {
-    year: "2020",
-    name: "Sneha Reddy",
-    pastPosition: "Former President",
-    tenure: "2020",
-    photo: "/teams/default.jpg",
-    social: {
-      linkedin: "https://linkedin.com/in/snehareddy",
-      instagram: "https://instagram.com/sneha.reddy"
-    }
-  },
-  {
-    year: "2019",
-    name: "Vikram Singh",
-    pastPosition: "Former President",
-    tenure: "2019",
-    photo: "/teams/default.jpg",
-    social: {
-      linkedin: "https://linkedin.com/in/vikramsingh",
-      instagram: "https://instagram.com/vikram.singh"
-    }
-  },
-  {
-    year: "2018",
-    name: "Anjali Mehta",
-    pastPosition: "Former President",
-    tenure: "2018",
-    photo: "/teams/default.jpg",
-    social: {
-      linkedin: "https://linkedin.com/in/anjaliimehta",
-      instagram: "https://instagram.com/anjali.mehta"
-    }
   }
 ];
+

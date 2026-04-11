@@ -18,7 +18,7 @@ export const FacultyAdvisors = () => {
         >
           Faculty <span className="text-[#2DD4BF]">Advisor</span>
         </motion.h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-14">
           {facultyAdvisors.map((advisor, index) => (
             <motion.div
               key={advisor.name}

@@ -18,7 +18,7 @@ export const LeadershipBody = () => {
         >
           Leadership <span className="text-[#2DD4BF]">Body</span>
         </motion.h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-14">
           {leadershipBody.map((leader, index) => (
             <motion.div
               key={leader.name}
