@@ -32,6 +32,7 @@ const staggerChildren = {
 
 export default function AlumniPage() {
   const [activeFeatured, setActiveFeatured] = useState(0);
+  const [searchQuery, setSearchQuery] = useState("");
 
   const featuredAlumni = [
     {
@@ -98,8 +99,12 @@ export default function AlumniPage() {
       year: "K19 Batch"
     }
   ];
-
   const currentAlumnus = featuredAlumni[activeFeatured];
+
+  const filteredAlumni = alumniList.filter((alumni) =>
+    alumni.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    alumni.year.toLowerCase().includes(searchQuery.toLowerCase())
+  );
 
   return (
     <main className="min-h-screen bg-[#080808] text-white pt-24 pb-32">
@@ -129,26 +134,26 @@ export default function AlumniPage() {
 
                 <div className="flex items-center gap-4">
                   <div className="inline-flex items-center px-4 py-1.5 rounded-full border border-[#2DD4BF]/30 bg-[#2DD4BF]/5 backdrop-blur-sm">
-                    <span className="text-[#2DD4BF] text-[10px] font-bold uppercase tracking-[0.2em]">
+                    <span className="text-[#2DD4BF] text-[10px] font-black uppercase tracking-[0.3em]">
                       Distinguished Alumni
                     </span>
                   </div>
                 </div>
 
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-white leading-[1.1]">
+                <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight text-white leading-[1.1]">
                   {currentAlumnus.name} <span className="text-[#2DD4BF]">{currentAlumnus.lastName}</span>
                 </h1>
 
-                <p className="text-lg md:text-xl text-neutral-400 max-w-xl leading-relaxed font-light">
+                <p className="text-lg md:text-xl text-neutral-400 max-w-xl leading-relaxed font-medium">
                   {currentAlumnus.description}
                 </p>
 
                 <div className="flex flex-wrap gap-4 pt-4">
-                  <button className="flex items-center gap-2 px-8 py-4 rounded-full bg-white text-[#080808] font-bold uppercase tracking-widest text-xs hover:bg-[#2DD4BF] hover:shadow-[0_0_30px_rgba(45,212,191,0.5)] transition-all duration-500 transform hover:-translate-y-1">
+                  <button className="flex items-center gap-2 px-8 py-4 rounded-full bg-white text-[#080808] font-black uppercase tracking-widest text-xs hover:bg-[#2DD4BF] hover:shadow-[0_0_30px_rgba(45,212,191,0.5)] transition-all duration-500 transform hover:-translate-y-1">
                     Read More
                     <ArrowUpRight className="w-4 h-4 text-[#080808]" />
                   </button>
-                  <button className="flex items-center gap-2 px-8 py-4 border-2 border-white/10 text-white font-bold uppercase tracking-widest text-xs rounded-full hover:border-[#2DD4BF] hover:bg-[#2DD4BF]/5 transition-all duration-500 transform hover:-translate-y-1 backdrop-blur-sm">
+                  <button className="flex items-center gap-2 px-8 py-4 border-2 border-white/10 text-white font-black uppercase tracking-widest text-xs rounded-full hover:border-[#2DD4BF] hover:bg-[#2DD4BF]/5 transition-all duration-500 transform hover:-translate-y-1 backdrop-blur-sm">
                     View Profile
                   </button>
                 </div>
@@ -226,10 +231,10 @@ export default function AlumniPage() {
           className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16"
         >
           <div className="space-y-4 max-w-2xl">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black tracking-tight">
               The <span className="text-[#2DD4BF]">Archive</span>
             </h2>
-            <p className="text-neutral-400 text-lg font-light">
+            <p className="text-neutral-400 text-lg md:text-xl font-medium leading-relaxed">
               Tracing the legacy of ECE Society excellence through decades of innovation.
             </p>
           </div>
@@ -239,6 +244,8 @@ export default function AlumniPage() {
             <input
               type="text"
               placeholder="Search alumni..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full bg-[#1A1A1A] border border-white/5 text-white placeholder:text-neutral-500 rounded-full py-3.5 pl-11 pr-4 focus:outline-none focus:border-[#2DD4BF]/50 focus:ring-1 focus:ring-[#2DD4BF]/50 transition-all text-sm"
             />
           </div>
@@ -250,7 +257,7 @@ export default function AlumniPage() {
           variants={staggerChildren}
           className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6"
         >
-          {alumniList.map((alumni) => (
+          {filteredAlumni.map((alumni) => (
             <motion.div
               key={alumni.name}
               variants={fadeUp}
@@ -265,9 +272,9 @@ export default function AlumniPage() {
                 />
               </div>
               <div className="p-6 flex flex-col flex-grow">
-                <p className="text-[#2DD4BF] text-xs font-bold tracking-wider uppercase mb-2">{alumni.role}</p>
-                <h3 className="text-xl font-semibold mb-3 text-white">{alumni.name}</h3>
-                <p className="text-sm text-neutral-400 mb-6 flex-grow leading-relaxed font-light">
+                <p className="text-[#2DD4BF] text-[10px] font-black tracking-[0.2em] uppercase mb-2">{alumni.role}</p>
+                <h3 className="text-xl font-black tracking-normal mb-3 text-white">{alumni.name}</h3>
+                <p className="text-sm text-neutral-400 mb-6 flex-grow leading-relaxed font-medium">
                   "{alumni.description}"
                 </p>
 
@@ -305,10 +312,10 @@ export default function AlumniPage() {
           <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#2DD4BF]/5 blur-[120px] rounded-full pointer-events-none -translate-y-1/2 translate-x-1/3"></div>
           <div className="grid grid-cols-1 lg:grid-cols-2 relative z-10">
             <div className="p-8 md:p-12 lg:p-16 flex flex-col justify-center">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <h2 className="text-3xl md:text-4xl lg:text-5xl font-black uppercase tracking-tighter mb-6">
                 Stay Connected to the <span className="text-[#2DD4BF]">Network</span>
               </h2>
-              <p className="text-neutral-400 text-lg mb-10 max-w-md leading-relaxed font-light">
+              <p className="text-neutral-400 text-lg mb-10 max-w-md leading-relaxed font-medium">
                 Your expertise is our foundation. Join the network to mentor the current batch, access the alumni portal, and collaborate on next-gen projects.
               </p>
 
@@ -367,7 +374,7 @@ export default function AlumniPage() {
                   />
                 </div>
 
-                <button type="button" className="w-full py-4 mt-2 rounded-full bg-white text-[#080808] font-bold uppercase tracking-widest text-xs hover:bg-[#2DD4BF] hover:shadow-[0_0_30px_rgba(45,212,191,0.5)] transition-all duration-500 transform hover:-translate-y-1">
+                <button type="button" className="w-full py-4 mt-2 rounded-full bg-white text-[#080808] font-black uppercase tracking-widest text-xs hover:bg-[#2DD4BF] hover:shadow-[0_0_30px_rgba(45,212,191,0.5)] transition-all duration-500 transform hover:-translate-y-1">
                   Submit Registration
                 </button>
               </form>

@@ -45,7 +45,7 @@ export const GallerySection = () => {
     }, [isPaused]);
 
     return (
-        <section className="pt-36 pb-16 bg-gradient-to-b from-[#0e0e0e] to-[#080808] overflow-hidden">
+        <section className="py-36 bg-gradient-to-b from-[#0e0e0e] to-[#080808] overflow-hidden">
             <div className="max-w-[1800px] mx-auto">
                 <SectionReveal className="mb-24 flex flex-col items-center text-center px-6">
                     <div className="flex flex-col gap-6 items-center">
@@ -60,20 +60,22 @@ export const GallerySection = () => {
                 </SectionReveal>
 
                 {/* 3D Coverflow Container */}
-                <div 
+                <div
                     className="relative h-[500px] flex items-center justify-center perspective-[1500px]"
+                    onMouseEnter={() => setIsPaused(true)}
+                    onMouseLeave={() => setIsPaused(false)}
                 >
                     <div className="relative w-full h-full flex items-center justify-center preserve-3d">
                         {galleryImages.map((src, index) => {
                             const offset = index - activeIndex;
-                            
+
                             // Circular logic (showing items within a range)
                             let normalizedOffset = offset;
                             if (offset > galleryImages.length / 2) normalizedOffset -= galleryImages.length;
                             if (offset < -galleryImages.length / 2) normalizedOffset += galleryImages.length;
 
                             const absNormalizedOffset = Math.abs(normalizedOffset);
-                            
+
                             // Hide items that are too far away
                             const isVisible = absNormalizedOffset <= 3;
 
@@ -95,10 +97,8 @@ export const GallerySection = () => {
                                         damping: 25
                                     }}
                                     onClick={() => setActiveIndex(index)}
-                                    onMouseEnter={() => setIsPaused(true)}
-                                    onMouseLeave={() => setIsPaused(false)}
                                     className="absolute w-[350px] md:w-[500px] aspect-[16/10] cursor-pointer group"
-                                    style={{ 
+                                    style={{
                                         display: isVisible ? 'block' : 'none',
                                         transformStyle: 'preserve-3d'
                                     }}
@@ -111,10 +111,10 @@ export const GallerySection = () => {
                                             className="object-cover transition-transform duration-1000 group-hover:scale-110"
                                             sizes="500px"
                                         />
-                                        
+
                                         {/* Dynamic Overlay */}
                                         <div className={`absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent transition-opacity duration-500 ${absNormalizedOffset === 0 ? 'opacity-100' : 'opacity-40 group-hover:opacity-100'}`} />
-                                        
+
                                         {/* Status Text (focused on active card) */}
                                         <div className={`absolute bottom-10 left-10 transition-all duration-500 ${absNormalizedOffset === 0 ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-6 group-hover:opacity-100 group-hover:translate-y-0'}`}>
                                             <div className="flex flex-col gap-1">
