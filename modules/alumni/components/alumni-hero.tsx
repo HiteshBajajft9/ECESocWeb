@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowUpRight, ChevronLeft, ChevronRight } from "lucide-react";
+import { FiLinkedin, FiMail } from "react-icons/fi";
 
 export const featuredAlumni = [
   {
@@ -12,7 +13,9 @@ export const featuredAlumni = [
     role: "Neural Systems Architect",
     description: "Pioneering the intersection of neural networks and architectural bio-mimicry at the forefront of urban evolution. Her ground-breaking research at the ECE Society laid the foundation for modern adaptive smart-cities, directly influencing metropolitan infrastructures across four continents.",
     image: "/images/alumni/elara.png",
-    year: "K15 batch"
+    year: "K15 batch",
+    linkedin: "#",
+    email: "#"
   },
   {
     name: "Arjun",
@@ -20,7 +23,9 @@ export const featuredAlumni = [
     role: "Lead Systems Architect",
     description: "Specializing in the development of hyper-redundant power grids for low-earth orbit satellite constellations and deep-space missions. Arjun's innovative research continues to push the boundaries of energy efficiency in orbital environments, ensuring resilient connectivity for the next generation of global communications.",
     image: "/images/alumni/marcus.png",
-    year: "K18 batch"
+    year: "K18 batch",
+    linkedin: "#",
+    email: "#"
   },
   {
     name: "Ishita",
@@ -28,12 +33,21 @@ export const featuredAlumni = [
     role: "AI Safety Researcher",
     description: "Spearheading the development of robust ethical alignment protocols for large-scale generative models at OpenAI. Ishita's published frameworks on algorithmic transparency have set new global standards, ensuring that advanced machine learning systems are navigated safely and serve humanity's core interests.",
     image: "/images/alumni/sarah.png",
-    year: "K20 batch"
+    year: "K20 batch",
+    linkedin: "#",
+    email: "#"
   }
 ];
 
 export function AlumniHero() {
   const [activeFeatured, setActiveFeatured] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveFeatured((prev) => (prev + 1) % featuredAlumni.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
 
   const nextProfile = () => {
     setActiveFeatured((prev) => (prev + 1) % featuredAlumni.length);
@@ -82,7 +96,7 @@ export function AlumniHero() {
                 {currentAlumnus.description}
               </p>
 
-              <div className="flex flex-wrap gap-4 pt-4">
+              <div className="flex flex-wrap items-center gap-4 pt-4">
                 <button className="flex items-center gap-2 px-8 py-4 rounded-full bg-white text-[#080808] font-black uppercase tracking-widest text-xs hover:bg-[#2DD4BF] hover:shadow-[0_0_30px_rgba(45,212,191,0.5)] transition-all duration-500 transform hover:-translate-y-1">
                   Read More
                   <ArrowUpRight className="w-4 h-4 text-[#080808]" />
@@ -116,9 +130,19 @@ export function AlumniHero() {
                   priority
                 />
 
-                <div className="absolute bottom-6 left-6 right-6 z-20 translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
-                  <p className="text-[#2DD4BF] text-xs font-bold uppercase tracking-widest mb-1">{currentAlumnus.role}</p>
-                  <p className="text-white text-lg font-medium">{currentAlumnus.name} {currentAlumnus.lastName}</p>
+                <div className="absolute bottom-6 left-6 right-6 z-20 flex justify-between items-end translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                  <div>
+                    <p className="text-[#2DD4BF] text-xs font-bold uppercase tracking-widest mb-1">{currentAlumnus.role}</p>
+                    <p className="text-white text-lg font-medium">{currentAlumnus.name} {currentAlumnus.lastName}</p>
+                  </div>
+                  <div className="flex gap-3">
+                    <a href={currentAlumnus.linkedin} target="_blank" rel="noopener noreferrer" className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white transition-all duration-300 hover:border-[#2DD4BF]/40 hover:bg-[#2DD4BF]/15 hover:text-[#2DD4BF]">
+                      <FiLinkedin size={18} />
+                    </a>
+                    <a href={currentAlumnus.email} className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white transition-all duration-300 hover:border-[#2DD4BF]/40 hover:bg-[#2DD4BF]/15 hover:text-[#2DD4BF]">
+                      <FiMail size={18} />
+                    </a>
+                  </div>
                 </div>
               </motion.div>
             </AnimatePresence>

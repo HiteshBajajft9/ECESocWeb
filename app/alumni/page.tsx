@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { AlumniHero } from "@/modules/alumni/components/alumni-hero";
 import { AlumniArchive } from "@/modules/alumni/components/alumni-archive";
 import { AlumniNetwork } from "@/modules/alumni/components/alumni-network";
@@ -12,13 +11,3 @@ export default function AlumniPage() {
     </main>
   );
 }
-=======
-export default function Alumni() {
-  return (
-    <main className="min-h-screen">
-      <h1>Alumni Page</h1>
-      <p>Coming soon...</p>
-    </main>
-  );
-}
->>>>>>> origin/main
