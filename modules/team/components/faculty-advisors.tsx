@@ -18,13 +18,14 @@ export const FacultyAdvisors = () => {
         >
           Faculty <span className="text-[#2DD4BF]">Advisor</span>
         </motion.h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-14">
+        <div className="flex justify-center flex-wrap gap-14">
           {facultyAdvisors.map((advisor, index) => (
             <motion.div
               key={advisor.name}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: index * 0.08 }}
+              className="w-full max-w-[280px]"
             >
               <TeamMemberCard member={advisor} />
             </motion.div>

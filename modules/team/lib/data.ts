@@ -11,11 +11,11 @@ export interface TeamMember {
 
 export const facultyAdvisors: TeamMember[] = [
   {
-    name: "Arnav Srivastava",
+    name: "Sanjaya Shankar Tripathy",
     role: "Faculty Advisor",
-    photo: "/teams/Arnav Srivastava.JPG",
+    photo: "/teams/SST.jpeg",
     social: {
-      gmail: "advisor1@college.edu",
+      gmail: "sstripathy@bitmesra.ac.in",
       linkedin: "https://linkedin.com/",
     },
   },
@@ -65,7 +65,7 @@ export const leadershipBody: TeamMember[] = [
   {
     name: "Romil Raj",
     role: "Web Technical Head",
-    photo: "/teams/Romil Raj.jpg",
+    photo: "/teams/Romil_Raj.webp",
     social: {
       gmail: "btech10662.23@bitmesra.ac.in",
       instagram: "https://www.instagram.com/raj_romil_/",
@@ -75,7 +75,7 @@ export const leadershipBody: TeamMember[] = [
   {
     name: "Pratham Periwal",
     role: "Vice President",
-    photo: "/teams/Pratham Periwal.jpeg",
+    photo: "/teams/PP.jpeg",
     social: {
       gmail: "btech10141.23@bitmesra.ac.in",
       instagram: "https://www.instagram.com/me_prathamperiwal/",
@@ -114,50 +114,50 @@ export const leadershipBody: TeamMember[] = [
   {
     name: "Abhinav Kumar Choudhary",
     role: "Senior Executive Member",
-    photo: "/teams/Abhinav Kumar Choudhary.jpg",
+    photo: "/teams/AKC.jpg",
     social: {
       gmail: "btech10139.23@bitmesra.ac.in",
       instagram: "https://www.instagram.com/poetry_aficionado",
       linkedin: "https://www.linkedin.com/in/abhi1264"
     },
   },
-  {
-    name: "Sahil Kumar",
-    role: "Vice President",
-    photo: "/teams/Sahil Kumar.jpg",
-    social: {
-      gmail: "btech10436.22@bitmesra.ac.in",
-      instagram: "https://www.instagram.com/notreallysahil",
-      linkedin: "https://www.linkedin.com/in/sahil-kumar-641220267"
-    },
-  }
+  // {
+  //   name: "Sahil Kumar",
+  //   role: "Vice President",
+  //   photo: "/teams/Sahil Kumar.jpg",
+  //   social: {
+  //     gmail: "btech10436.22@bitmesra.ac.in",
+  //     instagram: "https://www.instagram.com/notreallysahil",
+  //     linkedin: "https://www.linkedin.com/in/sahil-kumar-641220267"
+  //   },
+  // }
 ];
 
 export const executives: TeamMember[] = [
   {
     name: "Hitesh Bajaj",
-    role: "Leadership Coordinator",
+    role: "Tech Coordinator",
     photo: "/teams/Hitesh Bajaj.webp",
-    social: { instagram: "#", linkedin: "#" },
+    social: { instagram: "https://www.instagram.com/hiteshbajajcp10/?hl=en", linkedin: "https://www.linkedin.com/in/hitesh-bajaj-8b6520328/" },
   },
   {
-    name: "Sadique Ahmad Khan",
-    role: "Video Coordinator",
-    photo: "/teams/Sadique Khan.jpg",
+    name: "Arnav Srivastava",
+    role: "Tech Executive Member",
+    photo: "/teams/Arnav Srivastava.jpg",
     social: {
-      gmail: "btech10720.24@bitmesra.ac.in",
-      instagram: "https://www.instagram.com/sadique.khan.01/",
-      linkedin: "https://www.linkedin.com/in/sadique-ahmad-khan-1a185137b/"
+      gmail: "btech10746.24@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/arnavvv_014/",
+      linkedin: "https://www.linkedin.com/in/arnav-srivastava-58b94a321/"
     },
   },
   {
-    name: "Baishnavi Prasad",
-    role: "Core Coordinator",
-    photo: "/teams/Baishnavi Prasad.jpg",
+    name: "Gurpreet Singh",
+    role: "Tech Executive Member",
+    photo: "/teams/GS.png",
     social: {
       gmail: "btech10295.24@bitmesra.ac.in",
-      instagram: "https://www.instagram.com/baishnaviprasad",
-      linkedin: "https://www.linkedin.com/in/baishnavi-prasad-bab90233b"
+      instagram: "https://www.instagram.com/gurpreet_kek/",
+      linkedin: "https://www.linkedin.com/in/gurpreet-singh-sarmotta-402a6a304/"
     },
   },
   {
@@ -276,7 +276,47 @@ export const executives: TeamMember[] = [
     social: {
       gmail: "btech10899.24@bitmesra.ac.in"
     },
-  }
+  },
+  {
+    name: "Sadique Ahmad Khan",
+    role: "Video Coordinator",
+    photo: "/teams/Sadique Khan.jpg",
+    social: {
+      gmail: "btech10720.24@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/sadique.khan.01/",
+      linkedin: "https://www.linkedin.com/in/sadique-ahmad-khan-1a185137b/"
+    },
+  },
+  {
+    name: "Baishnavi Prasad",
+    role: "Core Coordinator",
+    photo: "/teams/Baishnavi Prasad.jpg",
+    social: {
+      gmail: "btech10295.24@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/baishnaviprasad",
+      linkedin: "https://www.linkedin.com/in/baishnavi-prasad-bab90233b"
+    },
+   }
+   //,
+
+  // {
+  //   name: "Executive Member 3",
+  //   role: "Role",
+  //   photo: "/teams/default.jpg",
+  //   social: {}
+  // },
+  // {
+  //   name: "Executive Member 4",
+  //   role: "Role",
+  //   photo: "/teams/default.jpg",
+  //   social: {}
+  // },
+  // {
+  //   name: "Executive Member 5",
+  //   role: "Role",
+  //   photo: "/teams/default.jpg",
+  //   social: {}
+  // }
 ];
 
 export interface HallOfFameMember {
@@ -293,30 +333,89 @@ export interface HallOfFameMember {
   };
 }
 
-export const contributors: TeamMember[] = [];
+export const contributors: TeamMember[] = [
+  {
+     name: "Hitesh Bajaj",
+    role: "Tech Coordinator",
+    photo: "/teams/Hitesh Bajaj.webp",
+    social: { instagram: "https://www.instagram.com/hiteshbajajcp10/?hl=en", linkedin: "https://www.linkedin.com/in/hitesh-bajaj-8b6520328/" },
+  },
+  {
+     name: "Priyanshu Srivastava",
+    role: "Tech Coordinator",
+    photo: "/teams/Priyanshu Srivastava.jpeg",
+    social: {
+      gmail: "btech10717.24@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/priyanshusri023/",
+      linkedin: "https://www.linkedin.com/in/priyanshu-srivastava-171038320/"
+    },
+  },
+  {
+    name: "Arnav Srivastava",
+    role: "Tech Executive Member",
+    photo: "/teams/Arnav Srivastava.jpg",
+    social: {
+      gmail: "btech10746.24@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/arnavvv_014/",
+      linkedin: "https://www.linkedin.com/in/arnav-srivastava-58b94a321/"
+    },
+  },
+  {
+    name: "Sidhant Anweshi",
+    role: "Tech Executive Member",
+    photo: "/teams/Sidhant Anweshi.jpg",
+    social: {
+      gmail: "btech10434.24@bitmesra.ac.in",
+      linkedin: "https://www.linkedin.com/in/sidhant-anweshi-077422390"
+    },
+  }
+  // ,
+  // {
+  //   name: "Contributor 5",
+  //   role: "Support",
+  //   photo: "/teams/default.jpg",
+  //   social: {}
+  // }
+];
 
 export const hallOfFame: HallOfFameMember[] = [
   {
     year: "2022",
-    name: "Rahul Sharma",
+    name: "Abhyuday Pandey",
     pastPosition: "Former President",
     tenure: "2022",
-    photo: "/teams/default.jpg",
+    photo: "/teams/ABP.jpg",
     social: {
-      linkedin: "https://linkedin.com/in/rahulsharma",
-      instagram: "https://instagram.com/rahul.sharma"
+      linkedin: "https://www.linkedin.com/in/abhyuday-pandey-2302ad/",
+      instagram: "https://www.instagram.com/abhyu2302/"
     }
   },
   {
     year: "2022",
-    name: "Priya Patel",
+    name: "Sahil Kumar",
     pastPosition: "Former Vice President",
     tenure: "2022",
-    photo: "/teams/default.jpg",
+    photo: "/teams/SK.jpeg",
     social: {
-      linkedin: "https://linkedin.com/in/priyapatel",
-      instagram: "https://instagram.com/priya.patel"
+      linkedin: "https://www.linkedin.com/in/sahil-kumar-641220267/",
+      instagram: "https://www.instagram.com/notreallysahil?igsh=MXBtYWtxcnB6ZjU4eg=="
     }
+  },
+  {
+    year: "2021",
+    name: "Hall of Fame Member",
+    pastPosition: "Position",
+    tenure: "2021",
+    photo: "/teams/default.jpg",
+    social: {}
+  },
+  {
+    year: "2020",
+    name: "Hall of Fame Member",
+    pastPosition: "Position",
+    tenure: "2020",
+    photo: "/teams/default.jpg",
+    social: {}
   }
 ];
 
