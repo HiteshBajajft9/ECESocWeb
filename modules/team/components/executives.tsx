@@ -7,9 +7,9 @@ import { executives } from '../lib/data';
 
 export const Executives = () => {
   return (
-    <section className="relative py-24 px-6 md:px-12 lg:px-16 bg-[#080808] section-glow-bottom overflow-hidden">
+    <section className="relative py-24 px-4 md:px-8 xl:px-12 bg-[#080808] section-glow-bottom overflow-hidden">
       <div className="absolute bottom-0 left-0 w-72 h-72 bg-purple-500/10 blur-3xl rounded-full opacity-80" />
-      <SectionReveal className="relative z-10 max-w-6xl mx-auto">
+      <SectionReveal className="relative z-10 max-w-7xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -18,11 +18,11 @@ export const Executives = () => {
         >
           <span className="text-[#2DD4BF]">Executives</span>
         </motion.h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-14">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8 xl:gap-14">
           {executives.map((exec, index) => (
             <motion.div
               key={exec.name}
-              className="h-full"
+              className="w-full max-w-[280px] mx-auto"
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: index * 0.08 }}

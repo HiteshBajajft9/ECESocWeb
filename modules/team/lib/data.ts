@@ -296,8 +296,8 @@ export const executives: TeamMember[] = [
       instagram: "https://www.instagram.com/baishnaviprasad",
       linkedin: "https://www.linkedin.com/in/baishnavi-prasad-bab90233b"
     },
-   }
-   //,
+  }
+  //,
 
   // {
   //   name: "Executive Member 3",
@@ -335,13 +335,13 @@ export interface HallOfFameMember {
 
 export const contributors: TeamMember[] = [
   {
-     name: "Hitesh Bajaj",
+    name: "Hitesh Bajaj",
     role: "Tech Coordinator",
     photo: "/teams/Hitesh Bajaj.webp",
     social: { instagram: "https://www.instagram.com/hiteshbajajcp10/?hl=en", linkedin: "https://www.linkedin.com/in/hitesh-bajaj-8b6520328/" },
   },
   {
-     name: "Priyanshu Srivastava",
+    name: "Priyanshu Srivastava",
     role: "Tech Coordinator",
     photo: "/teams/Priyanshu Srivastava.jpeg",
     social: {

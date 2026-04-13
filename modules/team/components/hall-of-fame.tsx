@@ -164,7 +164,7 @@ export const HallOfFame = () => {
             >
 
 
-              <div ref={containerRef} className={`relative mt-6 gap-4 sm:gap-6 ${selectedMembers.length === 1 ? 'flex justify-center' : 'grid sm:grid-cols-2'}`}>
+              <div ref={containerRef} className="relative mt-6 flex flex-wrap gap-6 sm:gap-8 justify-center sm:justify-start">
                 {selectedMembers.map((member, index) => {
                   return (
                     <motion.div
@@ -173,7 +173,7 @@ export const HallOfFame = () => {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true, margin: '-15% 0px -15% 0px' }}
                       transition={{ duration: 0.5, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                      className={`relative z-10 ${selectedMembers.length === 1 ? 'w-full max-w-[420px]' : 'w-full'}`}
+                      className="relative z-10 w-full max-w-[280px]"
                     >
                       <HallOfFameCard member={member} />
                     </motion.div>
