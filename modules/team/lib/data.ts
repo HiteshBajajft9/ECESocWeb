@@ -87,6 +87,8 @@ export const leadershipBody: TeamMember[] = [
     name: "Pratham Periwal",
     role: "Vice President",
     photo: "/teams/PP.jpeg",
+    zoom: 1.2,
+    objectPosition: "center bottom",
     social: {
       gmail: "btech10141.23@bitmesra.ac.in",
       instagram: "https://www.instagram.com/me_prathamperiwal/",

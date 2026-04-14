@@ -110,7 +110,7 @@ export default function ThreeBackground() {
       requestAnimationFrame(animate);
 
       // Update particles
-      particles.children.forEach((particle: THREE.Mesh) => {
+      particles.children.forEach((particle: THREE.Object3D) => {
         particle.position.x += particle.userData.velocity.x;
         particle.position.y += particle.userData.velocity.y;
         particle.position.z += particle.userData.velocity.z;
@@ -125,7 +125,7 @@ export default function ThreeBackground() {
       });
 
       // Update shapes
-      shapes.children.forEach((shape: THREE.Mesh) => {
+      shapes.children.forEach((shape: THREE.Object3D) => {
         shape.position.x += shape.userData.velocity.x;
         shape.position.y += shape.userData.velocity.y;
         shape.position.z += shape.userData.velocity.z;
