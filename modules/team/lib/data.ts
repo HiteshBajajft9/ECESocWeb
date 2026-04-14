@@ -200,6 +200,7 @@ export const executives: TeamMember[] = [
     name: "Priyanshu Srivastava",
     role: "Tech Coordinator",
     photo: "/teams/Priyanshu Srivastava.jpeg",
+    zoom: 1.5,
     social: {
       gmail: "btech10717.24@bitmesra.ac.in",
       instagram: "https://www.instagram.com/priyanshusri023/",
@@ -262,6 +263,8 @@ export const executives: TeamMember[] = [
     name: "Siddharth Kumar Nayak",
     role: "ML Head",
     photo: "/teams/Siddharth Kumar Nayak .jpg",
+    zoom: 2,
+    objectPosition: "center 20%",
     social: {
       gmail: "btech10756.24@bitmesra.ac.in",
       instagram: "https://www.instagram.com/nayaksiddharth_719",
@@ -272,6 +275,8 @@ export const executives: TeamMember[] = [
     name: "Sameer Kumar",
     role: "Core Coordinator",
     photo: "/teams/Sameer Kumar.jpg",
+    zoom: 1.8,
+    objectPosition: "center top",
     social: {
       gmail: "btech10805.24@bitmesra.ac.in",
       instagram: "https://www.instagram.com/sameerrkrr",

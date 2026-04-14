@@ -45,9 +45,9 @@ export const GallerySection = () => {
     }, [isPaused]);
 
     return (
-        <section className="py-36 bg-gradient-to-b from-[#0e0e0e] to-[#080808] overflow-hidden">
+        <section className="min-h-[100vh] flex flex-col justify-center py-10 lg:py-0 bg-gradient-to-b from-[#0e0e0e] to-[#080808] overflow-hidden">
             <div className="max-w-[1800px] mx-auto">
-                <SectionReveal className="mb-24 flex flex-col items-center text-center px-6">
+                <SectionReveal className="mb-12 flex flex-col items-center text-center px-6">
                     <div className="flex flex-col gap-6 items-center">
                         <span className="text-[#2DD4BF] font-black tracking-[0.3em] uppercase text-xs">
                             Visual Synthesis

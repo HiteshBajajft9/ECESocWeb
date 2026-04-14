@@ -27,7 +27,7 @@ export const Executives = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: index * 0.08 }}
             >
-              <TeamMemberCard member={exec} />
+              <TeamMemberCard member={exec} priority={index < 4} />
             </motion.div>
           ))}
         </div>

@@ -27,7 +27,7 @@ export const FacultyAdvisors = () => {
               transition={{ duration: 0.7, delay: index * 0.08 }}
               className="w-full max-w-[280px]"
             >
-              <TeamMemberCard member={advisor} />
+              <TeamMemberCard member={advisor} priority={index < 4} />
             </motion.div>
           ))}
         </div>

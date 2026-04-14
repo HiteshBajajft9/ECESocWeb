@@ -76,10 +76,10 @@ export const FacultyTestimonials = () => {
     };
 
     return (
-        <section className="py-36 px-6 relative overflow-hidden bg-[#080808] section-glow-bottom">
+        <section className="min-h-[100vh] flex flex-col justify-center py-10 lg:py-0 px-6 relative overflow-hidden bg-[#080808] section-glow-bottom">
             <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16">
                 {/* Section Header - Tiered Theme */}
-                <SectionReveal className="text-center mb-24">
+                <SectionReveal className="text-center mb-12">
                     <div className="flex flex-col gap-6 items-center">
                         <span className="text-[#2DD4BF] font-black tracking-[0.3em] uppercase text-xs">
                             Faculty Insights
@@ -146,6 +146,7 @@ export const FacultyTestimonials = () => {
                                                     alt={testimonials[currentIndex].name}
                                                     fill
                                                     className="object-cover"
+                                                    sizes="(max-width: 768px) 112px, 112px"
                                                 />
                                             </div>
                                         </div>

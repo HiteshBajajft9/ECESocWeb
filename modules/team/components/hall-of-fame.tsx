@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useScroll } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useMemo, useState, useRef } from 'react';
 import { FiInstagram, FiMail, FiLinkedin, FiGithub } from 'react-icons/fi';
 import Image from 'next/image';
@@ -86,12 +86,6 @@ const HallOfFameCard = ({ member }: HallOfFameCardProps) => {
 };
 
 export const HallOfFame = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start center', 'end center'],
-  });
-
   const years = useMemo(
     () => Array.from(new Set(hallOfFame.map((member) => member.year))).sort((a, b) => Number(b) - Number(a)),
     []
@@ -164,7 +158,7 @@ export const HallOfFame = () => {
             >
 
 
-              <div ref={containerRef} className="relative mt-6 flex flex-wrap gap-6 sm:gap-8 justify-center sm:justify-start">
+              <div className="relative mt-6 flex flex-wrap gap-6 sm:gap-8 justify-center sm:justify-start">
                 {selectedMembers.map((member, index) => {
                   return (
                     <motion.div

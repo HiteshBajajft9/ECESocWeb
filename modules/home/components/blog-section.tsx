@@ -70,10 +70,10 @@ export const BlogSection = () => {
     };
 
     return (
-        <section className="py-36 px-6 bg-[#000] overflow-hidden section-glow-bottom">
+        <section className="min-h-[100vh] flex flex-col justify-center py-10 lg:py-0 px-6 bg-[#000] overflow-hidden section-glow-bottom">
             <div className="max-w-[1800px] mx-auto text-center">
                 {/* Header */}
-                <SectionReveal className="text-center mb-16">
+                <SectionReveal className="text-center mb-10">
                     <div className="flex flex-col gap-6 items-center">
                         <span className="text-[#2DD4BF] font-black tracking-[0.3em] uppercase text-xs">
                             Insights
@@ -89,7 +89,7 @@ export const BlogSection = () => {
                 </SectionReveal>
 
                 {/* Fan Layout Container */}
-                <div className="relative h-[750px] flex justify-center items-center mb-24 perspective-[1500px]">
+                <div className="relative h-[550px] flex justify-center items-center mb-2 perspective-[1500px]">
                     {blogs.map((blog, index) => {
                         const style = getCardStyles(index);
                         return (
@@ -99,8 +99,8 @@ export const BlogSection = () => {
                                     opacity: 0,
                                     rotate: 0,
                                     x: 0,
-                                    y: 100,
-                                    scale: 0.8
+                                    y: 0,
+                                    scale: 0.95
                                 }}
                                 whileInView={{
                                     opacity: 1,
@@ -121,12 +121,12 @@ export const BlogSection = () => {
                                 viewport={{ once: true, margin: "-100px" }}
                                 whileHover={{
                                     rotate: 0,
-                                    y: -60,
+                                    y: -30,
                                     scale: 1.15,
                                     zIndex: 50,
                                     transition: { duration: 0.4, ease: "easeOut" }
                                 }}
-                                className="absolute w-[300px] md:w-[350px] h-[450px] md:h-[500px] rounded-[3rem] overflow-hidden border border-white/10 cursor-pointer shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8)] group transition-all duration-300"
+                                className="absolute w-[300px] md:w-[350px] h-[350px] md:h-[400px] rounded-[3rem] overflow-hidden border border-white/10 cursor-pointer shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8)] group transition-all duration-300"
                                 style={{ zIndex: style.index }}
                             >
                                 <div className="absolute inset-0 z-0">
