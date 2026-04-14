@@ -14,6 +14,8 @@ interface TeamMemberCardProps {
       gmail?: string;
       linkedin?: string;
     };
+    objectPosition?: string;
+    zoom?: number;
   };
 }
 
@@ -27,13 +29,22 @@ export const TeamMemberCard = ({ member }: TeamMemberCardProps) => {
       <div className="relative h-full overflow-hidden rounded-[2.5rem] border border-white/10 bg-[#090909]/90 shadow-[0_30px_80px_-30px_rgba(0,0,0,0.8)] transition-all duration-500 hover:shadow-[0_35px_90px_-20px_rgba(45,212,191,0.28)] hover:border-[#2DD4BF]/30">
         <div className="relative h-full overflow-hidden">
           <div className="relative aspect-[4/5] overflow-hidden">
-            <Image
-              src={member.photo}
-              alt={member.name}
-              fill
-              className="object-cover transition-transform duration-1000 group-hover:scale-110"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-transparent to-transparent" />
+            <div 
+              className="absolute inset-0 transition-transform duration-1000"
+              style={{ 
+                transform: member.zoom ? `scale(${member.zoom})` : 'none',
+                transformOrigin: member.objectPosition || 'center center'
+              }}
+            >
+              <Image
+                src={member.photo}
+                alt={member.name}
+                fill
+                className="object-cover transition-transform duration-1000 group-hover:scale-110"
+                style={{ objectPosition: member.objectPosition || 'center center' }}
+              />
+            </div>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-transparent to-transparent pointer-events-none" />
 
             <div className="absolute inset-x-0 bottom-0 px-4 pb-4 pt-20">
               <div className="translate-y-4 transition-transform duration-300 group-hover:-translate-y-2">

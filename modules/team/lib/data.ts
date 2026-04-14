@@ -7,6 +7,8 @@ export interface TeamMember {
     gmail?: string;
     linkedin?: string;
   };
+  objectPosition?: string;
+  zoom?: number;
 }
 
 export const facultyAdvisors: TeamMember[] = [
@@ -144,68 +146,26 @@ export const leadershipBody: TeamMember[] = [
 
 export const executives: TeamMember[] = [
   {
-    name: "Hitesh Bajaj",
-    role: "Tech Coordinator",
-    photo: "/teams/Hitesh Bajaj.webp",
-    social: { instagram: "https://www.instagram.com/hiteshbajajcp10/?hl=en", linkedin: "https://www.linkedin.com/in/hitesh-bajaj-8b6520328/" },
-  },
-  {
-    name: "Arnav Srivastava",
-    role: "Tech Executive Member",
-    photo: "/teams/Arnav Srivastava.jpg",
+    name: "Anmol Kumar",
+    role: "General Secretary",
+    photo: "/teams/Anmol Kumar.jpg",
+    objectPosition: "center 20%",
+    zoom: 1.2,
     social: {
-      gmail: "btech10746.24@bitmesra.ac.in",
-      instagram: "https://www.instagram.com/arnavvv_014/",
-      linkedin: "https://www.linkedin.com/in/arnav-srivastava-58b94a321/"
-    },
-  },
-  {
-    name: "Gurpreet Singh",
-    role: "Tech Executive Member",
-    photo: "/teams/GS.png",
-    social: {
-      gmail: "btech10295.24@bitmesra.ac.in",
-      instagram: "https://www.instagram.com/gurpreet_kek/",
-      linkedin: "https://www.linkedin.com/in/gurpreet-singh-sarmotta-402a6a304/"
-    },
-  },
-  {
-    name: "Priyanshu Srivastava",
-    role: "Tech Coordinator",
-    photo: "/teams/Priyanshu Srivastava.jpeg",
-    social: {
-      gmail: "btech10717.24@bitmesra.ac.in",
-      instagram: "https://www.instagram.com/priyanshusri023/",
-      linkedin: "https://www.linkedin.com/in/priyanshu-srivastava-171038320/"
-    },
-  },
-  {
-    name: "Sidhant Anweshi",
-    role: "Executive Member",
-    photo: "/teams/Sidhant Anweshi.jpg",
-    social: {
-      gmail: "btech10434.24@bitmesra.ac.in",
-      linkedin: "https://www.linkedin.com/in/sidhant-anweshi-077422390"
+      gmail: "btech10376.24@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/anmolkr.ojha/",
+      linkedin: "https://www.linkedin.com/in/anmol-kumar-b36270323/"
     },
   },
   {
     name: "Aanyaa Sinha",
     role: "Joint Secretary",
     photo: "/teams/Aanyaa Sinha.jpg",
+    zoom: 1.5,
     social: {
       gmail: "btech10789.24@bitmesra.ac.in",
       instagram: "https://www.instagram.com/aanyaasinha_1676",
       linkedin: "https://www.linkedin.com/in/aanyaa-sinha-426524326"
-    },
-  },
-  {
-    name: "Prince Janardan",
-    role: "Alumni and Relation Coordinator",
-    photo: "/teams/Prince Janardan.JPG",
-    social: {
-      gmail: "btech10680.24@bitmesra.ac.in",
-      instagram: "https://www.instagram.com/janardanprince",
-      linkedin: "https://www.linkedin.com/in/prince-janardan-66a148325/"
     },
   },
   {
@@ -229,13 +189,19 @@ export const executives: TeamMember[] = [
     },
   },
   {
-    name: "Siddharth Kumar Nayak",
-    role: "ML Head",
-    photo: "/teams/Siddharth Kumar Nayak .jpg",
+    name: "Hitesh Bajaj",
+    role: "Tech Coordinator",
+    photo: "/teams/Hitesh Bajaj.webp",
+    social: { instagram: "https://www.instagram.com/hiteshbajajcp10/?hl=en", linkedin: "https://www.linkedin.com/in/hitesh-bajaj-8b6520328/" },
+  },
+  {
+    name: "Priyanshu Srivastava",
+    role: "Tech Coordinator",
+    photo: "/teams/Priyanshu Srivastava.jpeg",
     social: {
-      gmail: "btech10756.24@bitmesra.ac.in",
-      instagram: "https://www.instagram.com/nayaksiddharth_719",
-      linkedin: "https://www.linkedin.com/in/siddharth-kumar-nayak-a26449338"
+      gmail: "btech10717.24@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/priyanshusri023/",
+      linkedin: "https://www.linkedin.com/in/priyanshu-srivastava-171038320/"
     },
   },
   {
@@ -249,23 +215,55 @@ export const executives: TeamMember[] = [
     },
   },
   {
-    name: "Aozz",
-    role: "Alumni Relations Coordinator",
-    photo: "/teams/Aozz Brahmshiv Jha .jpg",
+    name: "Sadique Ahmad Khan",
+    role: "Video Coordinator",
+    photo: "/teams/Sadique Khan.jpg",
     social: {
-      gmail: "btech10794.24@bitmesra.ac.in",
-      instagram: "https://www.instagram.com/notaozz/",
-      linkedin: "https://www.linkedin.com/in/aozz/"
+      gmail: "btech10720.24@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/sadique.khan.01/",
+      linkedin: "https://www.linkedin.com/in/sadique-ahmad-khan-1a185137b/"
     },
   },
   {
-    name: "Anmol Kumar",
-    role: "General Secretary",
-    photo: "/teams/Anmol Kumar.jpg",
+    name: "Arnav Srivastava",
+    role: "Tech Executive Member",
+    photo: "/teams/Arnav Srivastava.jpg",
+    zoom: 1.1,
+    objectPosition: "center bottom",
     social: {
-      gmail: "btech10376.24@bitmesra.ac.in",
-      instagram: "https://www.instagram.com/anmolkr.ojha/",
-      linkedin: "https://www.linkedin.com/in/anmol-kumar-b36270323/"
+      gmail: "btech10746.24@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/arnavvv_014/",
+      linkedin: "https://www.linkedin.com/in/arnav-srivastava-58b94a321/"
+    },
+  },
+  {
+    name: "Prince Janardan",
+    role: "Alumni and Relation Coordinator",
+    photo: "/teams/Prince Janardan.JPG",
+    social: {
+      gmail: "btech10680.24@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/janardanprince",
+      linkedin: "https://www.linkedin.com/in/prince-janardan-66a148325/"
+    },
+  },
+  {
+    name: "Baishnavi Prasad",
+    role: "Core Coordinator",
+    photo: "/teams/Baishnavi Prasad.jpg",
+    social: {
+      gmail: "btech10295.24@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/baishnaviprasad",
+      linkedin: "https://www.linkedin.com/in/baishnavi-prasad-bab90233b"
+    },
+  },
+  {
+    name: "Siddharth Kumar Nayak",
+    role: "ML Head",
+    photo: "/teams/Siddharth Kumar Nayak .jpg",
+    social: {
+      gmail: "btech10756.24@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/nayaksiddharth_719",
+      linkedin: "https://www.linkedin.com/in/siddharth-kumar-nayak-a26449338"
     },
   },
   {
@@ -279,6 +277,16 @@ export const executives: TeamMember[] = [
     },
   },
   {
+    name: "Aozz",
+    role: "Alumni Relations Coordinator",
+    photo: "/teams/Aozz Brahmshiv Jha .jpg",
+    social: {
+      gmail: "btech10794.24@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/notaozz/",
+      linkedin: "https://www.linkedin.com/in/aozz/"
+    },
+  },
+  {
     name: "Akriti Agarwal",
     role: "Content Coordinator",
     photo: "/teams/Akriti Agarwal .jpg",
@@ -287,45 +295,24 @@ export const executives: TeamMember[] = [
     },
   },
   {
-    name: "Sadique Ahmad Khan",
-    role: "Video Coordinator",
-    photo: "/teams/Sadique Khan.jpg",
+    name: "Gurpreet Singh",
+    role: "Tech Executive Member",
+    photo: "/teams/GS.png",
     social: {
-      gmail: "btech10720.24@bitmesra.ac.in",
-      instagram: "https://www.instagram.com/sadique.khan.01/",
-      linkedin: "https://www.linkedin.com/in/sadique-ahmad-khan-1a185137b/"
+      gmail: "btech10295.24@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/gurpreet_kek/",
+      linkedin: "https://www.linkedin.com/in/gurpreet-singh-sarmotta-402a6a304/"
     },
   },
   {
-    name: "Baishnavi Prasad",
-    role: "Core Coordinator",
-    photo: "/teams/Baishnavi Prasad.jpg",
+    name: "Sidhant Anweshi",
+    role: "Executive Member",
+    photo: "/teams/Sidhant Anweshi.jpg",
     social: {
-      gmail: "btech10295.24@bitmesra.ac.in",
-      instagram: "https://www.instagram.com/baishnaviprasad",
-      linkedin: "https://www.linkedin.com/in/baishnavi-prasad-bab90233b"
+      gmail: "btech10434.24@bitmesra.ac.in",
+      linkedin: "https://www.linkedin.com/in/sidhant-anweshi-077422390"
     },
   }
-  //,
-
-  // {
-  //   name: "Executive Member 3",
-  //   role: "Role",
-  //   photo: "/teams/default.jpg",
-  //   social: {}
-  // },
-  // {
-  //   name: "Executive Member 4",
-  //   role: "Role",
-  //   photo: "/teams/default.jpg",
-  //   social: {}
-  // },
-  // {
-  //   name: "Executive Member 5",
-  //   role: "Role",
-  //   photo: "/teams/default.jpg",
-  //   social: {}
-  // }
 ];
 
 export interface HallOfFameMember {
