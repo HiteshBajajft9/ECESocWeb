@@ -11,6 +11,15 @@ export interface TeamMember {
 
 export const facultyAdvisors: TeamMember[] = [
   {
+    name: "Sanjay Kumar",
+    role: "HOD-ECE",
+    photo: "/teams/hod.jpg",
+    social: {
+      gmail: "skumar@bitmesra.ac.in",
+      linkedin: "https://linkedin.com/",
+    },
+  },
+  {
     name: "Sanjaya Shankar Tripathy",
     role: "Faculty Advisor",
     photo: "/teams/SST.jpeg",

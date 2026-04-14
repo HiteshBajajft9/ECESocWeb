@@ -16,7 +16,7 @@ export const FacultyAdvisors = () => {
           transition={{ duration: 0.8 }}
           className="text-5xl md:text-6xl font-black text-center mb-16 text-white"
         >
-          Faculty <span className="text-[#2DD4BF]">Advisor</span>
+          Faculty <span className="text-[#2DD4BF]">Advisors</span>
         </motion.h2>
         <div className="flex justify-center flex-wrap gap-14">
           {facultyAdvisors.map((advisor, index) => (
