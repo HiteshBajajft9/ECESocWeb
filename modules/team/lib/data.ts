@@ -34,26 +34,6 @@ export const facultyAdvisors: TeamMember[] = [
 
 export const leadershipBody: TeamMember[] = [
   {
-    name: "Arijit Dubey",
-    role: "Core Technical Head",
-    photo: "/teams/Arijit_Dubey.jpg",
-    social: {
-      gmail: "btech10142.23@gmail.com",
-      instagram: "https://www.instagram.com/omniman1107/",
-      linkedin: "https://www.linkedin.com/in/arijit-dubey-85471028a/"
-    },
-  },
-  {
-    name: "Rahul Kumar",
-    role: "Event Head",
-    photo: "/teams/RAHUL KUMAR (1).jpg",
-    social: {
-      gmail: "btech10203.23@bitmesra.ac.in",
-      instagram: "https://www.instagram.com/rahullkumarr.__/",
-      linkedin: "https://www.linkedin.com/in/rahul-kumar-2004-06-06-rk"
-    },
-  },
-  {
     name: "Kumar Ishaan",
     role: "President",
     photo: "/teams/KUMAR ISHAAN.png",
@@ -61,26 +41,6 @@ export const leadershipBody: TeamMember[] = [
       gmail: "btech10101.23@bitmesra.ac.in",
       instagram: "https://www.instagram.com/kr._ishaan",
       linkedin: "https://www.linkedin.com/in/kumar-ishaan-44b3a429b"
-    },
-  },
-  {
-    name: "Megha Goswami",
-    role: "Event Head",
-    photo: "/teams/Megha_Goswami.jpg",
-    social: {
-      gmail: "btech10569.23@bitmesra.ac.in",
-      instagram: "https://www.instagram.com/__megha16__",
-      linkedin: "https://www.linkedin.com/in/megha-goswami2416/"
-    },
-  },
-  {
-    name: "Romil Raj",
-    role: "Web Technical Head",
-    photo: "/teams/Romil_Raj.webp",
-    social: {
-      gmail: "btech10662.23@bitmesra.ac.in",
-      instagram: "https://www.instagram.com/raj_romil_/",
-      linkedin: "https://www.linkedin.com/in/romil-raj-80983728a/"
     },
   },
   {
@@ -115,6 +75,26 @@ export const leadershipBody: TeamMember[] = [
     },
   },
   {
+    name: "Arijit Dubey",
+    role: "Core Technical Head",
+    photo: "/teams/Arijit_Dubey.jpg",
+    social: {
+      gmail: "btech10142.23@gmail.com",
+      instagram: "https://www.instagram.com/omniman1107/",
+      linkedin: "https://www.linkedin.com/in/arijit-dubey-85471028a/"
+    },
+  },
+  {
+    name: "Romil Raj",
+    role: "Web Technical Head",
+    photo: "/teams/Romil_Raj.webp",
+    social: {
+      gmail: "btech10662.23@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/raj_romil_/",
+      linkedin: "https://www.linkedin.com/in/romil-raj-80983728a/"
+    },
+  },
+  {
     name: "Parth Sarvansh Dixit",
     role: "Content Head",
     photo: "/teams/Parth_Sarvansh_Dixit.jpg",
@@ -122,6 +102,26 @@ export const leadershipBody: TeamMember[] = [
       gmail: "btech10720.23@bitmesra.ac.in",
       instagram: "https://www.instagram.com/parthsarvansh/",
       linkedin: "https://www.linkedin.com/in/parth-sarvansh-dixit-2487a5274/"
+    },
+  },
+  {
+    name: "Rahul Kumar",
+    role: "Event Head",
+    photo: "/teams/RAHUL KUMAR (1).jpg",
+    social: {
+      gmail: "btech10203.23@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/rahullkumarr.__/",
+      linkedin: "https://www.linkedin.com/in/rahul-kumar-2004-06-06-rk"
+    },
+  },
+  {
+    name: "Megha Goswami",
+    role: "Event Head",
+    photo: "/teams/Megha_Goswami.jpg",
+    social: {
+      gmail: "btech10569.23@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/__megha16__",
+      linkedin: "https://www.linkedin.com/in/megha-goswami2416/"
     },
   },
   {
@@ -227,18 +227,7 @@ export const executives: TeamMember[] = [
       linkedin: "https://www.linkedin.com/in/sadique-ahmad-khan-1a185137b/"
     },
   },
-  {
-    name: "Arnav Srivastava",
-    role: "Tech Executive Member",
-    photo: "/teams/Arnav Srivastava.jpg",
-    zoom: 1.1,
-    objectPosition: "center bottom",
-    social: {
-      gmail: "btech10746.24@bitmesra.ac.in",
-      instagram: "https://www.instagram.com/arnavvv_014/",
-      linkedin: "https://www.linkedin.com/in/arnav-srivastava-58b94a321/"
-    },
-  },
+
   {
     name: "Prince Janardan",
     role: "Alumni and Relation Coordinator",
@@ -250,18 +239,18 @@ export const executives: TeamMember[] = [
     },
   },
   {
-    name: "Baishnavi Prasad",
-    role: "Core Coordinator",
-    photo: "/teams/Baishnavi Prasad.jpg",
+    name: "Aozz",
+    role: "Alumni Relations Coordinator",
+    photo: "/teams/Aozz Brahmshiv Jha .jpg",
     social: {
-      gmail: "btech10295.24@bitmesra.ac.in",
-      instagram: "https://www.instagram.com/baishnaviprasad",
-      linkedin: "https://www.linkedin.com/in/baishnavi-prasad-bab90233b"
+      gmail: "btech10794.24@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/notaozz/",
+      linkedin: "https://www.linkedin.com/in/aozz/"
     },
   },
   {
     name: "Siddharth Kumar Nayak",
-    role: "ML Head",
+    role: "ML Coordinator",
     photo: "/teams/Siddharth Kumar Nayak .jpg",
     zoom: 2,
     objectPosition: "center 20%",
@@ -284,15 +273,16 @@ export const executives: TeamMember[] = [
     },
   },
   {
-    name: "Aozz",
-    role: "Alumni Relations Coordinator",
-    photo: "/teams/Aozz Brahmshiv Jha .jpg",
+    name: "Baishnavi Prasad",
+    role: "Core Coordinator",
+    photo: "/teams/Baishnavi Prasad.jpg",
     social: {
-      gmail: "btech10794.24@bitmesra.ac.in",
-      instagram: "https://www.instagram.com/notaozz/",
-      linkedin: "https://www.linkedin.com/in/aozz/"
+      gmail: "btech10295.24@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/baishnaviprasad",
+      linkedin: "https://www.linkedin.com/in/baishnavi-prasad-bab90233b"
     },
   },
+
   {
     name: "Akriti Agarwal",
     role: "Content Coordinator",
@@ -309,6 +299,18 @@ export const executives: TeamMember[] = [
       gmail: "btech10295.24@bitmesra.ac.in",
       instagram: "https://www.instagram.com/gurpreet_kek/",
       linkedin: "https://www.linkedin.com/in/gurpreet-singh-sarmotta-402a6a304/"
+    },
+  },
+  {
+    name: "Arnav Srivastava",
+    role: "Executive Member",
+    photo: "/teams/Arnav Srivastava.jpg",
+    zoom: 1.1,
+    objectPosition: "center bottom",
+    social: {
+      gmail: "btech10746.24@bitmesra.ac.in",
+      instagram: "https://www.instagram.com/arnavvv_014/",
+      linkedin: "https://www.linkedin.com/in/arnav-srivastava-58b94a321/"
     },
   },
   {

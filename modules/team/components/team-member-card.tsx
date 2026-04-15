@@ -49,20 +49,20 @@ export const TeamMemberCard = ({ member, priority }: TeamMemberCardProps) => {
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-transparent to-transparent pointer-events-none" />
 
-            <div className="absolute inset-x-0 bottom-0 px-4 pb-4 pt-20">
+            <div className="absolute inset-x-0 bottom-0 px-2 min-[530px]:px-4 pb-3 min-[530px]:pb-4 pt-16 min-[530px]:pt-20">
               <div className="translate-y-4 transition-transform duration-300 group-hover:-translate-y-2">
-                <h3 className="text-lg md:text-xl font-black text-white tracking-tight">{member.name}</h3>
-                <p className="text-xs md:text-sm text-neutral-300 mt-1">{member.role}</p>
+                <h3 className="text-[14px] min-[530px]:text-lg md:text-xl font-black text-white tracking-tight leading-tight">{member.name}</h3>
+                <p className="text-[10px] min-[530px]:text-xs md:text-sm text-neutral-300 mt-1">{member.role}</p>
               </div>
-              <div className="mt-5 flex items-center justify-center gap-3 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+              <div className="mt-2 min-[530px]:mt-5 flex items-center justify-center gap-1 min-[530px]:gap-3 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
                 {member.social.instagram && (
                   <a
                     href={member.social.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white transition-all duration-300 hover:border-[#2DD4BF]/40 hover:bg-[#2DD4BF]/15 hover:text-[#2DD4BF]"
+                    className="inline-flex h-8 w-8 min-[530px]:h-11 min-[530px]:w-11 items-center justify-center rounded-xl min-[530px]:rounded-2xl border border-white/10 bg-white/5 text-white transition-all duration-300 hover:border-[#2DD4BF]/40 hover:bg-[#2DD4BF]/15 hover:text-[#2DD4BF]"
                   >
-                    <FiInstagram size={18} />
+                    <FiInstagram size={18} className="scale-75 min-[530px]:scale-100" />
                   </a>
                 )}
                 {member.social.linkedin && (
@@ -70,17 +70,17 @@ export const TeamMemberCard = ({ member, priority }: TeamMemberCardProps) => {
                     href={member.social.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white transition-all duration-300 hover:border-[#2DD4BF]/40 hover:bg-[#2DD4BF]/15 hover:text-[#2DD4BF]"
+                    className="inline-flex h-8 w-8 min-[530px]:h-11 min-[530px]:w-11 items-center justify-center rounded-xl min-[530px]:rounded-2xl border border-white/10 bg-white/5 text-white transition-all duration-300 hover:border-[#2DD4BF]/40 hover:bg-[#2DD4BF]/15 hover:text-[#2DD4BF]"
                   >
-                    <FiLinkedin size={18} />
+                    <FiLinkedin size={18} className="scale-75 min-[530px]:scale-100" />
                   </a>
                 )}
                 {member.social.gmail && (
                   <a
                     href={`mailto:${member.social.gmail}`}
-                    className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-white/10 bg-white/5 text-white transition-all duration-300 hover:border-[#2DD4BF]/40 hover:bg-[#2DD4BF]/15 hover:text-[#2DD4BF]"
+                    className="inline-flex h-8 w-8 min-[530px]:h-11 min-[530px]:w-11 items-center justify-center rounded-xl min-[530px]:rounded-2xl border border-white/10 bg-white/5 text-white transition-all duration-300 hover:border-[#2DD4BF]/40 hover:bg-[#2DD4BF]/15 hover:text-[#2DD4BF]"
                   >
-                    <FiMail size={18} />
+                    <FiMail size={18} className="scale-75 min-[530px]:scale-100" />
                   </a>
                 )}
               </div>

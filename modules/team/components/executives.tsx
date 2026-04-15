@@ -18,7 +18,7 @@ export const Executives = () => {
         >
           <span className="text-[#2DD4BF]">Executives</span>
         </motion.h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8 xl:gap-14">
+        <div className="grid grid-cols-2 min-[530px]:grid-cols-3 min-[930px]:grid-cols-4 gap-3 min-[530px]:gap-6 min-[930px]:gap-8 xl:gap-14 px-2 sm:px-0">
           {executives.map((exec, index) => (
             <motion.div
               key={exec.name}

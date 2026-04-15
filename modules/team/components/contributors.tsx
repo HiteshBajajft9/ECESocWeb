@@ -18,7 +18,7 @@ export const Contributors = () => {
         >
           Our <span className="text-[#2DD4BF]">Contributors</span>
         </motion.h2>
-        <div className="overflow-hidden group">
+        <div className="overflow-hidden marquee-container">
           <div className="flex gap-8 marquee-track">
             {contributors.concat(contributors).map((contrib, index) => (
               <div key={`${contrib.name}-${index}`} className="flex-shrink-0 w-[240px] sm:w-[280px]">
@@ -33,7 +33,7 @@ export const Contributors = () => {
           animation: marquee 24s linear infinite;
         }
 
-        .group:hover .marquee-track {
+        .marquee-container:hover .marquee-track {
           animation-play-state: paused;
         }
 
