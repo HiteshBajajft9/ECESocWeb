@@ -59,8 +59,8 @@ export const SocialSection = () => {
     ];
 
     return (
-        <section className="py-24 lg:py-32 bg-gradient-to-b from-[#080808] to-[#040404] overflow-hidden">
-            <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16">
+        <section className="py-0 bg-gradient-to-b from-[#080808] to-[#040404] overflow-hidden">
+            <div className="max-w-[1800px] mx-auto px-6 md:px-12 lg:px-16 mt-0 mb-0">
                 <motion.div
                     variants={containerVariants}
                     initial="hidden"

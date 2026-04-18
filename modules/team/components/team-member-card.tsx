@@ -50,11 +50,11 @@ export const TeamMemberCard = ({ member, priority }: TeamMemberCardProps) => {
             <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-transparent to-transparent pointer-events-none" />
 
             <div className="absolute inset-x-0 bottom-0 px-2 min-[530px]:px-4 pb-3 min-[530px]:pb-4 pt-16 min-[530px]:pt-20">
-              <div className="translate-y-4 transition-transform duration-300 group-hover:-translate-y-2">
+              <div className="-translate-y-2 lg:translate-y-4 transition-transform duration-300 lg:group-hover:-translate-y-2">
                 <h3 className="text-[14px] min-[530px]:text-lg md:text-xl font-black text-white tracking-tight leading-tight">{member.name}</h3>
                 <p className="text-[10px] min-[530px]:text-xs md:text-sm text-neutral-300 mt-1">{member.role}</p>
               </div>
-              <div className="mt-2 min-[530px]:mt-5 flex items-center justify-center gap-1 min-[530px]:gap-3 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+              <div className="mt-2 min-[530px]:mt-5 flex items-center justify-center gap-1 min-[530px]:gap-3 opacity-100 translate-y-0 lg:opacity-0 lg:translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition-all duration-300">
                 {member.social.instagram && (
                   <a
                     href={member.social.instagram}

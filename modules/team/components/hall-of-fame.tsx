@@ -1,8 +1,9 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { useMemo, useState, useRef } from 'react';
 import { FiInstagram, FiMail, FiLinkedin, FiGithub } from 'react-icons/fi';
+import { ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 import { SectionReveal } from '@/modules/home/components/section-reveal';
 import { hallOfFame } from '../lib/data';
@@ -52,12 +53,12 @@ const HallOfFameCard = ({ member }: HallOfFameCardProps) => {
             </div>
 
             <div className="absolute inset-x-0 bottom-0 px-5 pb-5 pt-20">
-              <div className="transition-transform duration-300 group-hover:-translate-y-2">
+              <div className="-translate-y-2 lg:translate-y-0 transition-transform duration-300 lg:group-hover:-translate-y-2">
                 <h3 className="text-xl md:text-2xl font-black text-white tracking-tight">{member.name}</h3>
                 <p className="text-sm md:text-base text-neutral-300 font-semibold mt-1">{member.pastPosition}</p>
                 <p className="text-[10px] md:text-xs text-neutral-400 font-medium">{member.tenure}</p>
               </div>
-              <div className="mt-4 flex items-center gap-3 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
+              <div className="mt-4 flex items-center gap-3 opacity-100 translate-y-0 lg:opacity-0 lg:translate-y-4 lg:group-hover:opacity-100 lg:group-hover:translate-y-0 transition-all duration-300">
                 {member.social.instagram && (
                   <a
                     href={member.social.instagram}
@@ -93,6 +94,7 @@ export const HallOfFame = () => {
     []
   );
   const [selectedYear, setSelectedYear] = useState(years[0] ?? '');
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const selectedMembers = hallOfFame.filter((member) => member.year === selectedYear);
 
@@ -119,33 +121,44 @@ export const HallOfFame = () => {
           </p>
         </motion.div>
 
-        <div className="grid gap-8 lg:grid-cols-[120px_minmax(0,1fr)]">
+        <div className="grid gap-8 lg:grid-cols-[200px_minmax(0,1fr)]">
           <div className="relative">
             <div className="sticky top-32 rounded-3xl border border-white/10 bg-[#070707]/90 p-4 shadow-[0_30px_90px_-40px_rgba(0,0,0,0.6)] backdrop-blur-xl flex flex-col items-center">
               <p className="text-[10px] uppercase tracking-[0.3em] text-[#2DD4BF] mb-4 font-black">Timeline</p>
-              <div className="relative flex flex-col items-center gap-5 w-full">
-                {years.map((year) => {
-                  const isActive = selectedYear === year;
-
-                  return (
-                    <button
-                      key={year}
-                      type="button"
-                      onClick={() => setSelectedYear(year)}
-                      className="group relative outline-none transition-transform duration-300 hover:scale-105"
-                      aria-pressed={isActive}
+              
+              <div className="relative w-full z-50">
+                <button
+                  type="button"
+                  onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+                  className="group w-full px-4 py-3 rounded-2xl border border-white/20 bg-[#0f0f0f]/90 text-white font-bold flex items-center justify-between shadow-[0_5px_15px_-5px_rgba(0,0,0,0.8)] hover:border-[#2DD4BF]/60 hover:bg-[#2DD4BF]/5 hover:text-[#2DD4BF] transition-all duration-300"
+                >
+                  <span className="tracking-widest text-sm uppercase">{selectedYear}</span>
+                  <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isDropdownOpen ? "rotate-180 text-[#2DD4BF]" : "text-white/50 group-hover:text-[#2DD4BF]"}`} />
+                </button>
+                <AnimatePresence>
+                  {isDropdownOpen && (
+                    <motion.div
+                      initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                      animate={{ opacity: 1, y: 0, scale: 1 }}
+                      exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                      transition={{ duration: 0.2 }}
+                      className="absolute top-full left-0 right-0 mt-2 p-2 bg-[#090909]/95 border border-white/10 rounded-2xl shadow-[0_20px_50px_-20px_rgba(0,0,0,0.9)] backdrop-blur-3xl"
                     >
-                      <span
-                        className={`flex h-[4.5rem] w-[4.5rem] shrink-0 items-center justify-center rounded-full border text-base font-bold shadow-[0_10px_30px_-10px_rgba(0,0,0,0.5)] transition-all duration-300 group-hover:border-[#2DD4BF] group-hover:bg-[#2DD4BF]/10 group-hover:text-[#2DD4BF] group-hover:shadow-[0_0_25px_-5px_rgba(45,212,191,0.2)] ${isActive
-                            ? 'border-[#2DD4BF] bg-[#2DD4BF]/15 text-[#2DD4BF] shadow-[0_0_30px_-5px_rgba(45,212,191,0.3)]'
-                            : 'border-white/10 bg-[#0a0a0a] text-white/50'
-                          }`}
-                      >
-                        {year}
-                      </span>
-                    </button>
-                  );
-                })}
+                      <div className="max-h-[250px] overflow-y-auto custom-scrollbar flex flex-col gap-1">
+                        {years.map(year => (
+                          <button
+                            key={year}
+                            type="button"
+                            onClick={() => { setSelectedYear(year); setIsDropdownOpen(false); }}
+                            className={`w-full text-center px-2 py-2 rounded-xl transition-all duration-300 font-bold tracking-widest text-sm ${selectedYear === year ? 'text-[#2DD4BF] bg-[#2DD4BF]/10 border border-[#2DD4BF]/20 shadow-[0_0_10px_-2px_rgba(45,212,191,0.2)]' : 'text-neutral-400 border border-transparent hover:text-white hover:bg-white/5'}`}
+                          >
+                            {year}
+                          </button>
+                        ))}
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
               </div>
             </div>
           </div>
@@ -158,8 +171,6 @@ export const HallOfFame = () => {
               transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
               className="space-y-6"
             >
-
-
               <div className="relative mt-6 flex flex-wrap gap-6 sm:gap-8 justify-center sm:justify-start">
                 {selectedMembers.map((member, index) => {
                   return (
