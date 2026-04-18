@@ -69,8 +69,17 @@ export function AlumniHero() {
         Legacy
       </div>
 
+      {/* Mobile Section Badge */}
+      <div className="flex items-center justify-center mb-8 lg:hidden relative z-10 w-full">
+        <div className="inline-flex items-center px-4 py-1.5 rounded-full border border-[#2DD4BF]/30 bg-[#2DD4BF]/5 backdrop-blur-sm">
+          <span className="text-[#2DD4BF] text-[10px] font-black uppercase tracking-[0.3em]">
+            Distinguished Alumni
+          </span>
+        </div>
+      </div>
+
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center relative z-10">
-        <div className="relative min-h-[400px]">
+        <div className="relative min-h-[400px] order-2 lg:order-1">
           <AnimatePresence mode="wait">
             <motion.div
               key={`info-${activeFeatured}`}
@@ -78,9 +87,9 @@ export function AlumniHero() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-              className="space-y-8 absolute top-0 left-0 w-full"
+              className="space-y-8 absolute top-0 left-0 w-full flex flex-col items-center lg:items-start text-center lg:text-left"
             >
-              <div className="flex items-center gap-4">
+              <div className="hidden lg:flex items-center lg:justify-start gap-4">
                 <div className="inline-flex items-center px-4 py-1.5 rounded-full border border-[#2DD4BF]/30 bg-[#2DD4BF]/5 backdrop-blur-sm">
                   <span className="text-[#2DD4BF] text-[10px] font-black uppercase tracking-[0.3em]">
                     Distinguished Alumni
@@ -96,7 +105,7 @@ export function AlumniHero() {
                 {currentAlumnus.description}
               </p>
 
-              <div className="flex flex-wrap items-center gap-4 pt-4">
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-4">
                 <button className="flex items-center gap-2 px-8 py-4 rounded-full bg-white text-[#080808] font-black uppercase tracking-widest text-xs hover:bg-[#2DD4BF] hover:shadow-[0_0_30px_rgba(45,212,191,0.5)] transition-all duration-500 transform hover:-translate-y-1">
                   Read More
                   <ArrowUpRight className="w-4 h-4 text-[#080808]" />
@@ -109,7 +118,7 @@ export function AlumniHero() {
           </AnimatePresence>
         </div>
 
-        <div className="flex flex-col items-center gap-8">
+        <div className="flex flex-col items-center gap-8 order-1 lg:order-2">
           <div className="relative w-full max-w-md">
             <AnimatePresence mode="wait">
               <motion.div
