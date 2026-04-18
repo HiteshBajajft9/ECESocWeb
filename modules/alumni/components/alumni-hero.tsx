@@ -129,7 +129,7 @@ export function AlumniHero() {
                 transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
                 className="relative aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 shadow-2xl group cursor-pointer"
               >
-                <div className="absolute inset-0 bg-gradient-to-t from-[#080808]/80 to-transparent z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[#080808]/80 to-transparent z-10 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-500"></div>
                 <div className="absolute inset-0 bg-[#1A1A1A]"></div>
                 <Image
                   src={currentAlumnus.image}
@@ -139,7 +139,7 @@ export function AlumniHero() {
                   priority
                 />
 
-                <div className="absolute bottom-6 left-6 right-6 z-20 flex justify-between items-end translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500">
+                <div className="absolute bottom-6 left-6 right-6 z-20 flex justify-between items-end translate-y-0 opacity-100 lg:translate-y-4 lg:opacity-0 lg:group-hover:translate-y-0 lg:group-hover:opacity-100 transition-all duration-500">
                   <div>
                     <p className="text-[#2DD4BF] text-xs font-bold uppercase tracking-widest mb-1">{currentAlumnus.role}</p>
                     <p className="text-white text-lg font-medium">{currentAlumnus.name} {currentAlumnus.lastName}</p>
